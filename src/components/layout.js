@@ -1,55 +1,34 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
 
 import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import Hero from "./sections/hero/Hero.component"
+import Offer from "./sections/offer/Offer.component"
+import CourseStructure from "./sections/courseStructure/CourseStructure.component"
+import ElementaryEgzam from "./sections/elementaryEgzam/ElementaryEgzam.components"
+import Finals from "./sections/finals/Finals.component"
+import Contests from "./sections/contests/Contest.component"
+import CurrentMaterial from "./sections/currentMaterial/CurrentMaterial.component"
+import Contact from "./sections/contact/Contact.components"
+import Navbar from "./navbar/Navbar.component"
 
-import Header from "./header"
-import "./layout.css"
+import "../style/main.scss"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = () => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+      {/* <Navbar /> */}
+      <Hero />
+      <Offer />
+      <CourseStructure />
+      <ElementaryEgzam />
+      <Finals />
+      <Contests />
+      <CurrentMaterial />
+      <Contact />
+
     </>
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout
