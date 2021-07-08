@@ -3,7 +3,7 @@ module.exports = {
     title: `ST landing page`,
     description: `Landing page for private math coaching school`,
     author: `@michalfal`,
-    siteUrl: ``,
+    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
