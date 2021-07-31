@@ -1,9 +1,11 @@
 import React from 'react'
 
+import "./navbar.scss"
+
 const Navbar = () => {
     return (
-        <section>
-            <h1>Navbar</h1>
+        <section className="navbar">
+            test
         </section>
     )
 }

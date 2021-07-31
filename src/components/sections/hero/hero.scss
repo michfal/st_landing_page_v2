@@ -1,0 +1,25 @@
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../../images/main_bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #6a5bc5;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    &__logo {
+      width: 30vw;
+      min-width: 15rem;
+      // max-width: 50rem;
+      margin-top: 35vh;
+    }
+    &__scroll_icon {
+      width: 2.5rem;
+      margin-bottom: 5rem;
+    }
+  }
+
