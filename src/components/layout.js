@@ -16,7 +16,7 @@ const Layout = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Hero />
       <Offer />
       <CourseStructure />

@@ -1,25 +1,16 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
-import Fade from 'react-reveal/Fade'
+// import Fade from 'react-reveal/Fade'
 
+import './hero.scss'
+
+import logo from "../../../images/st_logo.svg"
+import downArrowIcon from "../../../images/arrow.svg"
 
 const Hero = () => {
     return(
-        <section >
-            <p className="test">hero</p>
-            <Fade left>
-            <h1>React Reveal</h1>
-            </Fade>
-            <Fade right>
-            <StaticImage
-                src="../../../images/st_logo.svg"
-                width={300}
-                quality={95}
-                formats={["AUTO", "WEBP", "AVIF"]}
-                alt="A Gatsby astronaut"
-            />
-            </Fade>
-
+        <section className="hero">
+            <img className="hero__logo" src={logo} alt="st logo" />
+            <img className="hero__scroll_icon" src={downArrowIcon} alt="down arrow icon" />
         </section>
     )
 };
