@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "st-landing-page",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Landing page for private math coaching school",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Michal Fal <michfal86@gmail.com>",
   "dependencies": {
     "gatsby": "^3.8.1",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
