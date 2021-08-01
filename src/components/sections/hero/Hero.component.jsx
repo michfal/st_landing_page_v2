@@ -3,8 +3,8 @@ import React from 'react'
 
 import './hero.scss'
 
-import logo from "../../../images/st_logo.svg"
-import downArrowIcon from "../../../images/arrow.svg"
+import logo from '../../../images/st_logo.svg'
+import downArrowIcon from '../../../images/arrow.svg'
 
 const Hero = () => {
     return(
