@@ -1,5 +1,58 @@
+@import '../../style/abstracts/variables';
+
 .navbar {
     width: 100vw;
     height: 3rem;
-    background-color: blueviolet;
+    background-color: $primary-dark;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: fixed;
+    &__icon {
+        height: 80%;
+        margin: 0;
+        pointer-events: none;
+    }
+    &__button {
+        background-color: transparent;
+        border: none;
+        height: 2rem;
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        &_icon {
+            margin: 0;
+        }
+    }
+    &__mobile_menu {
+        background-color: $secondary-dark;
+        height: 0;
+        width: 0;
+        max-width: 18rem;
+        max-height: 20rem;
+        z-index: 1;
+        position: fixed;
+        top: 3rem;
+        right: 0;
+        border-radius: 0 0 0 0.5rem;
+        transition: all 0.25s ease-in-out;
+        overflow: hidden;
+        &_list{
+            padding: 1rem 2rem 0 0;
+            list-style-type: none;
+            color: white;
+            font-size: 0.7rem;
+            word-wrap: normal;
+            line-height: 1.8rem;
+            text-align: right;
+        }
+        
+    }
+}
+
+.menu_display {
+    height: 80vh;
+    width: 90vw;
 }
