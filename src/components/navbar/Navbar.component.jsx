@@ -11,7 +11,7 @@ const MobileMenu = () => {
     return (
         <>
             <button className="navbar__button" onClick={btnClick}>
-                <img className="navbar__button_icon" src={hamburgerIcon}/>
+                <img className="navbar__button_icon" src={hamburgerIcon} alt="menu icon"/>
             </button>
             <div className="navbar__mobile_menu">
                 <ul className="navbar__mobile_menu_list">
@@ -37,7 +37,7 @@ const btnClick = (e) => {
 const Navbar = () => {
     return (
         <section className="navbar">
-            <img className="navbar__icon" src={owl_icon} />
+            <img className="navbar__icon" src={owl_icon} alt="owl icon"/>
             <MobileMenu />
         </section>
     )
