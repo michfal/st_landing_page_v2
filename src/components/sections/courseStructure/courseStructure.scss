@@ -1,0 +1,30 @@
+@import '../../../style/abstracts/variables';
+
+.structure {
+    height: 100vh;
+    width: 100vw;
+    &__list {
+        margin: auto;
+        width: 80%;
+        // border: 1px solid red;
+        list-style-position: inside;
+    }
+}
+
+li {
+    text-align: center;
+    font-size: 0.8rem;
+    color: $gray;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+li::before {
+    content:'';
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: $green;
+    border-radius: 1rem;
+    margin-right:  1rem;
+}
