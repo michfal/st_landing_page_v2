@@ -2,8 +2,8 @@
 
 .offer {
     height: 100vh;
-    width: 100vw;
-    border: 1px solid red;
+    // width: 100vw;
+    // border: 1px solid red;
     &__header {
         margin: 3.5rem 1rem 2rem 1rem;
         font-size: 1.2rem;
@@ -15,13 +15,14 @@
         content:'';
         display: block;
         border: 2px solid $secondary-dark;
+        background-color: $secondary-dark;
         border-radius: 2px;
         margin: 0.5rem auto;
     }
 }
 
 .offer__list {
-    width: 100vw;
+    // width: 100vw;
     height: 60vh;
     display: flex;
     flex-direction: column;

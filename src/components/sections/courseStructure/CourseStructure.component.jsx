@@ -1,12 +1,14 @@
 import React from 'react'
 
+import OvalHeader from '../../ovalHeader/OvalHeader.components'
+
 import './courseStructure.scss'
 
 const CourseStructure = () => {
     return (
         <section className="structure">
             <h3 className="structure__header">Całość składa się z:</h3>
-            <h4>36 spotkań po 60 minut</h4>
+                <OvalHeader headerText="36 spotkań po 60 minut" bgColor="background-blue"/>
             <h5>lub</h5>
             <h4>18 spotkań po 120 minut</h4>
             <ul className="structure__list">
