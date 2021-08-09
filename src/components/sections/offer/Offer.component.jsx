@@ -10,23 +10,23 @@ import './offer.scss'
 const Offer = () => {
     return (
         <section className="offer">
-            <h1 className="offer__header">Oferuję korepetycje z matematyki, pod kątem:</h1>
+            <h1 className="offer__header txt_purple_dark">Oferuję korepetycje z matematyki, pod kątem:</h1>
             <div className="offer__list">
                 <div className="offer__list_element">
                     <img className="element_icon" src={elementaryIcon} alt="elementary icon"></img>
-                    <h2 className="offer__list_element_text">Egzaminu <br/> 8-klasisty</h2>
+                    <h2 className="offer__list_element_text txt_purple_dark txt_purple_dark_regular">Egzaminu <br/> 8-klasisty</h2>
                 </div>
                 <div className="offer__list_element">
                     <img className="element_icon" src={contestIcon} alt="contest icon"></img>
-                    <h2 className="offer__list_element_text">Egzaminu <br/> Maturalnego</h2>
+                    <h2 className="offer__list_element_text txt_purple_dark txt_purple_dark_regular">Egzaminu <br/> Maturalnego</h2>
                 </div>
                 <div  className="offer__list_element">
                     <img className="element_icon" src={finalsIcon} alt="finals icon"></img>
-                    <h2 className="offer__list_element_text">Przygotowania <br/> do konkursów</h2>
+                    <h2 className="offer__list_element_text txt_purple_dark txt_purple_dark_regular">Przygotowania <br/> do konkursów</h2>
                 </div>
                 <div className="offer__list_element">
                     <img className="element_icon" src={currentIcon} alt="current icon"></img>
-                    <h2 className="offer__list_element_text">Bierzącego <br/> Materiału</h2>
+                    <h2 className="offer__list_element_text txt_purple_dark txt_purple_dark_regular">Bierzącego <br/> Materiału</h2>
                 </div>
             </div>
         </section>

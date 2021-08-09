@@ -35,3 +35,28 @@ a:hover {
   text-transform: uppercase;
 
 }
+
+.txt_purple_dark {
+  font-size: 1.2rem;
+  color: $secondary-dark;
+  &_regular {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+.txt_gray {
+  color: $gray;
+  // margin: auto;
+  &_point {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  &_header {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin: auto;
+  }
+}
