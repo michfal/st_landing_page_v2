@@ -22,7 +22,7 @@ const Layout = () => {
     setScope(thematicScope)
   }, [])
 
-  console.log(scopeData.elementaryEgzam)
+  console.log(scopeData)
 
   return (
     <>
@@ -30,12 +30,11 @@ const Layout = () => {
       <Hero />
       <Offer />
       <CourseStructure />
-      <ElementaryEgzam value={scopeData.elementaryEgzam}/>
-      <Finals value={scopeData.finals}/>
+      <ElementaryEgzam info={scopeData.elementaryEgzam}/>
+      <Finals info={scopeData.finals}/>
       <Contests />
       <CurrentMaterial />
       <Contact />
-
     </>
   )
 }
