@@ -12,14 +12,15 @@
     flex-wrap: wrap;
     flex-direction: column;
     &__logo {
-      width: 31vw;
+      width: 35vw;
       min-width: 16rem;
       // max-width: 50rem;
       margin-top: 40vh;
     }
     &__scroll_icon {
-      width: 4rem;
+      width: 3.5rem;
       margin-bottom: 4.5rem;
+      cursor: pointer;
     }
   }
 
