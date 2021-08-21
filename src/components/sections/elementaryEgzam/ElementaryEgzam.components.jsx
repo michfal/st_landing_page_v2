@@ -1,13 +1,14 @@
 import React from 'react'
 
 import LearningPlan from '../../learningPlan/LearningPlan.component'
+import OvalHeader from '../../ovalHeader/OvalHeader.components'
 
-const ElementaryEgzam = (value) => {
-    console.log(value.value)
+const ElementaryEgzam = ({info}) => {
+
     return (
         <section>
-            <h1>ElementaryEgzam</h1>
-            <LearningPlan />
+            <OvalHeader headerText="Egzamin 8-klasisty" bgColor="background-blue"/>
+            <LearningPlan info={info}/>
         </section>
     )
 }
