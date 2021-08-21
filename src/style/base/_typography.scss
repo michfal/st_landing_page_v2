@@ -21,7 +21,7 @@ a:hover {
 
 }
 
-.txt_purple_dark {
+.txt_purple--dark {
   font-size: 1.2rem;
   color: $secondary-dark;
   &_regular {
@@ -33,15 +33,21 @@ a:hover {
 
 .txt_gray {
   color: $gray;
-  // margin: auto;
-  &_point {
-    text-align: center;
+  text-align: center;
+  &--point {
     font-size: 0.8rem;
   }
-  &_header {
+  &--header {
     font-size: 1.5rem;
     font-weight: 400;
-    text-align: center;
     margin: auto;
   }
+  &--thematic_scope {
+    text-align: left;
+  }
+}
+
+.txt_white {
+  color: white;
+  text-align: center;
 }
