@@ -1,6 +1,6 @@
 import React from 'react'
 
-import OvalHeader from '../../ovalHeader/OvalHeader.components'
+import OvalHeader from '../../ovalHeader/OvalHeader.component'
 
 import './courseStructure.scss'
 

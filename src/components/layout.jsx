@@ -10,19 +10,21 @@ import CurrentMaterial from './sections/currentMaterial/CurrentMaterial.componen
 import Contact from './sections/contact/Contact.components'
 import Navbar from './navbar/Navbar.component'
 
-import {thematicScope} from '../mock/data'
+import {thematicScope, sectionTexts} from '../mock/data'
 
 import '../style/main.scss'
 
 const Layout = () => {
 
   const [scopeData, setScope] = useState({})
+  const [texts, setText] = useState({})
 
   useEffect(() => {
-    setScope(thematicScope)
+    setScope(thematicScope);
+    setText(sectionTexts)
   }, [])
 
-  console.log(scopeData)
+  // console.log(texts.elementaryEgzam)
 
   return (
     <>
@@ -30,7 +32,7 @@ const Layout = () => {
       <Hero />
       <Offer />
       <CourseStructure />
-      <ElementaryEgzam info={scopeData.elementaryEgzam}/>
+      <ElementaryEgzam info={scopeData.elementaryEgzam} paragraph={texts.elementaryEgzam}/>
       <Finals info={scopeData.finals}/>
       <Contests />
       <CurrentMaterial />
