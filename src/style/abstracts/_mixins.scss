@@ -1,5 +1,9 @@
 // MEDIA QUERY MANAGER
 
 
-
+@mixin content_width {
+    width: 80%;
+    max-width: 18rem;
+    min-width: 16rem;
+}
 
