@@ -1,0 +1,9 @@
+@import '../../../style/abstracts/variables';
+
+.elementary_egzam {
+    border: 1px solid red;
+    height: 100vh;
+    padding-top: 5.5rem;
+    display: flex;
+    flex-direction: column;
+}
