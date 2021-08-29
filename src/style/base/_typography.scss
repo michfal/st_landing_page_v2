@@ -50,7 +50,7 @@ a:hover {
   }
   &--thematic_scope {
     text-align: left;
-    line-height: 1.2rem;
+    line-height: 1.3rem;
   }
 }
 
@@ -58,8 +58,12 @@ a:hover {
   color: white;
   text-align: center;
   font-size: 1.1rem;
+  &--learning_plan {
+    font-size: 0.8rem
+  }
 }
 
 .learning_plan_counter {
   font-size: 1.5rem;
+  font-weight: 400;
 }
