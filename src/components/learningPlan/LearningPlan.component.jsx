@@ -18,6 +18,7 @@ const setColor = (i) => {
 const planItem = (info) => {
     console.log(info)
     return (
+        
         <div className="lp_content">{
             info.map((e, i) => {
                 setColor(i)      
@@ -34,14 +35,23 @@ const planItem = (info) => {
     )
 }
 
+const planOpen = () => {
+    console.log("open")
+    const content = document.querySelector('.lp_content')
+    content.classList.toggle("learning_plan_display")  
+}
+
 const LearningPlan = ({info}) => {
     const list = info !== undefined
 
     return (
         <>  
             <div className="learning_plan">
-                {/* <img className="hero__scroll_icon" src={downArrowIcon} alt="down arrow icon" /> */}
-                <h1 className="txt_white txt_white--learning_plan learning_plan__header">Przykładowy program</h1>
+                <div className="learning_plan__header" onClick={planOpen}>
+                    <img className="learning_plan__scroll_icon" src={downArrowIcon} alt="down arrow icon"  />
+                    <h1 className="txt_white txt_white--learning_plan">Przykładowy Program</h1>
+                </div>
+                
                 
                     {/* {list ? <ol className="learning_plan__content">{info.map((e) => <li key={nextId()} className="txt_gray txt_gray--thematic_scope learning_plan__content_li">{e}</li>)}</ol> : null} */}
                     {list ? planItem(info) : null}
