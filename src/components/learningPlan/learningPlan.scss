@@ -16,7 +16,8 @@
     }
     &__scroll_icon {
         width: 1.2rem;
-        margin: 0
+        margin: 0;
+        transition: transform 0.3s;
     }
 }
 
@@ -71,4 +72,8 @@
 .learning_plan_display {
     height: auto;
     transform: scale(1);
+}
+
+.lp_arrow_rotate {
+    transform: rotate(180deg)
 }

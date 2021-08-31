@@ -12,11 +12,10 @@ const setColor = (i) => {
     if ((number + 1) % 3 === 0) {
         return 'point_violet'
     }
-    
 }
 
 const planItem = (info) => {
-    console.log(info)
+    // console.log(info)
     return (
         
         <div className="lp_content">{
@@ -38,7 +37,9 @@ const planItem = (info) => {
 const planOpen = () => {
     console.log("open")
     const content = document.querySelector('.lp_content')
-    content.classList.toggle("learning_plan_display")  
+    const arrow = document.querySelector('.learning_plan__scroll_icon')
+    content.classList.toggle("learning_plan_display") 
+    arrow.classList.toggle("lp_arrow_rotate") 
 }
 
 const LearningPlan = ({info}) => {
@@ -51,10 +52,8 @@ const LearningPlan = ({info}) => {
                     <img className="learning_plan__scroll_icon" src={downArrowIcon} alt="down arrow icon"  />
                     <h1 className="txt_white txt_white--learning_plan">Przykładowy Program</h1>
                 </div>
-                
-                
-                    {/* {list ? <ol className="learning_plan__content">{info.map((e) => <li key={nextId()} className="txt_gray txt_gray--thematic_scope learning_plan__content_li">{e}</li>)}</ol> : null} */}
-                    {list ? planItem(info) : null}
+
+                {list ? planItem(info) : null}
             </div>
 
         </>
