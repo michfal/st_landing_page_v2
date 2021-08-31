@@ -2,23 +2,78 @@
 
 .learning_plan {
     margin: auto;
-    width: 80vw;
+    width: 75vw;
     &__header {
         background-color: $green;
-        padding: 0.5rem 0;
+        height: 1.5rem;
         width: 70%;
         margin: auto;
+        padding: 0 1rem 0 1rem;
         border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
     }
-    &__content {
-        border: 0.3rem solid $green;
-        border-radius: 1rem;
-        padding: 1rem;
-        margin: auto;
-        // height: 0;
-        overflow: hidden;
-        position: relative;
-        top: -1.2rem;
-        z-index: -1;
+    &__scroll_icon {
+        width: 1.2rem;
+        margin: 0;
+        transition: transform 0.3s;
     }
+}
+
+.lp_content {
+    border: 0.3rem solid $green;
+    padding: 0;
+    border-radius: 2rem;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    top: -1rem;
+    z-index: -1;
+    transform-origin: top;
+    height: 0;
+    // opacity: 0;
+    // transition: opacity 0.2s;
+    transform: scale(0);
+    transition: transform 0.3s;
+    &__item {
+        margin: 1.5rem auto;
+        width: 90%;;
+        display: flex;
+        align-items: center;
+        &_point {
+            background-color: $blue-green;
+            width: 2.5rem;
+            height: 2.5rem;
+            margin: auto 10% auto auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 1.5rem;
+        }
+        &_text {
+            width: 70%;
+        }
+    }
+}
+
+.point_green {
+    background-color: $green;
+}
+
+.point_blue {
+    background-color: $blue-green;
+}
+
+.point_violet {
+    background-color: $violet;
+}
+
+.learning_plan_display {
+    height: auto;
+    transform: scale(1);
+}
+
+.lp_arrow_rotate {
+    transform: rotate(180deg)
 }

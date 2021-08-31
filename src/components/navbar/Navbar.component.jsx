@@ -29,9 +29,8 @@ const MobileMenu = () => {
 }
 
 const btnClick = (e) => {
-    let element = document.querySelector('.navbar__mobile_menu')
-    element.classList.toggle("menu_display")
-    
+    const element = document.querySelector('.navbar__mobile_menu')
+    element.classList.toggle("menu_display")  
 }
 
 const Navbar = () => {
