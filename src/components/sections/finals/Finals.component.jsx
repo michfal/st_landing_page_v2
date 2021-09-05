@@ -12,7 +12,7 @@ const Finals = (props) => {
 
     return (
         <section className="finals">
-            <OvalHeader headerText="Egzamin 8-klasisty" bgColor="background-blue"/>
+            <OvalHeader headerText="Egzamin Maturalny" bgColor="background-green"/>
             <ParagraphText paragraph={paragraph}/>
             <LearningPlan info={info}/>
         </section>

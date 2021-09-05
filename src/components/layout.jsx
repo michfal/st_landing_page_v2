@@ -24,7 +24,6 @@ const Layout = () => {
     setText(sectionTexts)
   }, [])
 
-  // console.log(texts.elementaryEgzam)
 
   return (
     <>
@@ -34,7 +33,7 @@ const Layout = () => {
       <CourseStructure />
       <ElementaryEgzam info={scopeData.elementaryEgzam} paragraph={texts.elementaryEgzam}/>
       <Finals info={scopeData.finals} paragraph={texts.finals}/>
-      <Contests />
+      <Contests paragraph={texts.contest}/>
       <CurrentMaterial />
       <Contact />
     </>

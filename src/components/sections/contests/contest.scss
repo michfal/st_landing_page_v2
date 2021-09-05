@@ -1,0 +1,7 @@
+@import '../../../style/abstracts/variables';
+@import '../../../style/abstracts/mixins';
+
+
+.contest {
+    @include sections_layout;
+}
