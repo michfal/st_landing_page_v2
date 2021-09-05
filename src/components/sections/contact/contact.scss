@@ -1,0 +1,7 @@
+@import '../../../style/abstracts/variables';
+@import '../../../style/abstracts/mixins';
+
+
+.contact {
+    @include sections_layout;
+}

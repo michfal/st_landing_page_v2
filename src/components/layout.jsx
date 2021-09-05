@@ -34,7 +34,7 @@ const Layout = () => {
       <ElementaryEgzam info={scopeData.elementaryEgzam} paragraph={texts.elementaryEgzam}/>
       <Finals info={scopeData.finals} paragraph={texts.finals}/>
       <Contests paragraph={texts.contest}/>
-      <CurrentMaterial />
+      <CurrentMaterial paragraph={texts.currentMaterial}/>
       <Contact />
     </>
   )

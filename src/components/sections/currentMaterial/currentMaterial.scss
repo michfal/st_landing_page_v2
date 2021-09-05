@@ -1,0 +1,7 @@
+@import '../../../style/abstracts/variables';
+@import '../../../style/abstracts/mixins';
+
+
+.current_material {
+    @include sections_layout;
+}
