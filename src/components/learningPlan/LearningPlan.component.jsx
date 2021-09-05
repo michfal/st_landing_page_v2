@@ -51,13 +51,14 @@ const planItem = (info) => {
     )
 }
 
-function LearningPlan({info}) {
+function LearningPlan(props) {
+    const {info, bgColor} = props
     const list = info !== undefined
 
     return (
         <>  
             <div className="learning_plan" onClick={planOpen}>
-                <div className="learning_plan__header" >
+                <div className={`learning_plan__header ${bgColor}`} >
                     <img className="learning_plan__scroll_icon" src={downArrowIcon} alt="down arrow icon"  />
                     <h1 className="txt_white txt_white--learning_plan">Przykładowy Program</h1>
                 </div>

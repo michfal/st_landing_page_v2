@@ -14,7 +14,7 @@ const Finals = (props) => {
         <section className="finals">
             <OvalHeader headerText="Egzamin Maturalny" bgColor="background-green"/>
             <ParagraphText paragraph={paragraph}/>
-            <LearningPlan info={info}/>
+            <LearningPlan info={info} bgColor="background-green"/>
         </section>
     )
 }

@@ -2,12 +2,14 @@ import React from 'react'
 
 import OvalHeader from '../../ovalHeader/OvalHeader.component'
 
+import './contact.scss'
+
 const Contact = () => {
     return (
         <section className="contact">
             <OvalHeader headerText="Kontakt" bgColor="background-blue"/>
             <div className="contact__info">
-
+                
             </div>
         </section>
     )
