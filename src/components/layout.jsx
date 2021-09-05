@@ -33,7 +33,7 @@ const Layout = () => {
       <Offer />
       <CourseStructure />
       <ElementaryEgzam info={scopeData.elementaryEgzam} paragraph={texts.elementaryEgzam}/>
-      <Finals info={scopeData.finals}/>
+      <Finals info={scopeData.finals} paragraph={texts.finals}/>
       <Contests />
       <CurrentMaterial />
       <Contact />

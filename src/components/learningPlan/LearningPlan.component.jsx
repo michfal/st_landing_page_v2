@@ -4,6 +4,7 @@ import downArrowIcon from '../../images/arrow.svg'
 
 import './learningPlan.scss'
 
+
 const setColor = (i) => {
     const number = i + 1;
     if (number % 3 === 0) {
@@ -14,10 +15,26 @@ const setColor = (i) => {
     }
 }
 
+// const planOpen = () => {
+//     console.log("open")
+//     const content = document.querySelector('.lp_content')
+//     const arrow = document.querySelector('.learning_plan__scroll_icon')
+//     content.classList.toggle("learning_plan_display") 
+//     arrow.classList.toggle("lp_arrow_rotate") 
+// }
+
+const planOpen = (e) => {
+
+    const content = e.target.childNodes[1]
+    const arrow = e.target.childNodes[0].childNodes[0]
+
+    content.classList.toggle("learning_plan_display") 
+    arrow.classList.toggle("lp_arrow_rotate") 
+}
+
 const planItem = (info) => {
-    // console.log(info)
+
     return (
-        
         <div className="lp_content">{
             info.map((e, i) => {
                 setColor(i)      
@@ -34,21 +51,13 @@ const planItem = (info) => {
     )
 }
 
-const planOpen = () => {
-    console.log("open")
-    const content = document.querySelector('.lp_content')
-    const arrow = document.querySelector('.learning_plan__scroll_icon')
-    content.classList.toggle("learning_plan_display") 
-    arrow.classList.toggle("lp_arrow_rotate") 
-}
-
-const LearningPlan = ({info}) => {
+function LearningPlan({info}) {
     const list = info !== undefined
 
     return (
         <>  
-            <div className="learning_plan">
-                <div className="learning_plan__header" onClick={planOpen}>
+            <div className="learning_plan" onClick={planOpen}>
+                <div className="learning_plan__header" >
                     <img className="learning_plan__scroll_icon" src={downArrowIcon} alt="down arrow icon"  />
                     <h1 className="txt_white txt_white--learning_plan">Przykładowy Program</h1>
                 </div>
