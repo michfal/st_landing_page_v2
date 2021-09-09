@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" clip-rule="evenodd" viewBox="0 0 66 67">
+  <defs/>
+  <g transform="matrix(1 0 0 1.99699 -2435 -4333.29)">
+    <g id="icon_phone">
+      <path fill="#564e94" d="M485.35 5712.24c-10.112 12.75 5.091 41.74 20.16 45.26 1.795.42 7.876-3.67 8.296-4.83.892-2.45-3.623-9.82-5.933-10.66-1.826-.66-7.456 2.52-8.033 2.31-3.603-1.31-9.45-17.17-8.532-18.79.338-.6 6.062-1.84 6.504-4.4.442-2.56-1.751-9.57-3.851-10.99-1.019-.69-7.404.58-8.611 2.1z" transform="matrix(1 0 0 .50075 1970 -684.385)"/>
+      <circle cx="358" cy="4751" r="48" fill="none" stroke="#564e94" stroke-width="6.19" transform="matrix(.64583 0 0 .3234 2236.79 650.317)"/>
+    </g>
+  </g>
+</svg>
