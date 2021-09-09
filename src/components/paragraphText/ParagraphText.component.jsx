@@ -8,7 +8,7 @@ const ParagraphText = ({paragraph}) => {
 
     return (
         <>
-            {content ? <p className="txt_purple--dark txt_purple--dark_regular paragraph_text">{paragraph}</p> : null}
+            {content ? <p className="txt_purple txt_purple--regular paragraph_text">{paragraph}</p> : null}
         </>
     )
 }

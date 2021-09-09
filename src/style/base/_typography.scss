@@ -21,19 +21,22 @@ a:hover {
 
 }
 
-.txt_purple--dark {
+.txt_purple {
   font-size: 1.2rem;
-  color: $secondary-dark;
-  &_regular {
+  color: $dark-font;
+  &--regular {
     font-size: 1.1rem;
     line-height: 3rem;
     font-weight: 400;
     text-align: center;
   }
-  &_point {
+  &--point {
     font-size: 1.1rem;
     line-height: 1.4rem;
     font-weight: 700;
+  }
+  &--footer {
+    font-size: 0.6rem;
   }
 }
 
