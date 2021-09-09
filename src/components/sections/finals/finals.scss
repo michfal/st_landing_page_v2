@@ -1,8 +1,7 @@
 @import '../../../style/abstracts/variables';
 @import '../../../style/abstracts/mixins';
 
-.elementary_egzam {
-    // border: 1px solid red;
-    // min-height: 100vh;
+
+.finals {
     @include sections_layout;
 }

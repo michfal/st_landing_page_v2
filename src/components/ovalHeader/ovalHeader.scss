@@ -6,6 +6,10 @@
     padding: 1.2rem 1rem 0.5rem 1rem;
     border-radius: 2rem;
     margin: auto;
+    &--narrow {
+        width: 45%;
+        min-width: 9rem;
+    }
 }
 
 .background-green {

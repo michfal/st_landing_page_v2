@@ -1,0 +1,43 @@
+@import '../../../style/abstracts/variables';
+@import '../../../style/abstracts/mixins';
+
+
+.contact {
+    @include sections_layout;
+    // height: 50vh;
+    &__info {
+        background-color: $gray-light;
+        width: 75%;
+        height: 10rem;
+        border-radius: 2.5rem;
+        margin: 3rem auto 5rem auto;
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-evenly;
+        &_element {
+            // border: 1px solid red;
+            // width: 10rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+        }
+        &_icon {
+            height: 2.5rem;
+            margin-right: 1rem;
+        }
+        &_txt {
+            margin-top: -1rem;
+            &:after {
+                content: '';
+                display: block;
+                border: 1px solid $dark-font;
+                background-color: $dark-font;
+                border-radius: 2px;
+                width: 8rem;
+                margin-top: -0.5rem;;
+            }
+        }
+    }
+}

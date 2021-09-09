@@ -1,11 +1,23 @@
 import React from 'react'
 
-const Finals = () => {
+import LearningPlan from '../../learningPlan/LearningPlan.component'
+import OvalHeader from '../../ovalHeader/OvalHeader.component'
+import ParagraphText from '../../paragraphText/ParagraphText.component'
+
+import './finals.scss'
+
+const Finals = (props) => {
+
+    const {info, paragraph} = props
+
     return (
-        <section>
-            <h1>Finals</h1>
+        <section className="finals">
+            <OvalHeader headerText="Egzamin Maturalny" bgColor="background-green"/>
+            <ParagraphText paragraph={paragraph}/>
+            <LearningPlan info={info} bgColor="background-green"/>
         </section>
     )
 }
+
 
 export default Finals

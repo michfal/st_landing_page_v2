@@ -4,20 +4,24 @@
     margin: auto;
     width: 75vw;
     &__header {
-        background-color: $green;
+        // background-color: $green;
         height: 1.5rem;
         width: 70%;
+        max-width: 15rem;
+        min-width: 10rem;
         margin: auto;
         padding: 0 1rem 0 1rem;
         border-radius: 1rem;
         display: flex;
         align-items: center;
         justify-content: space-around;
+        pointer-events: none;
     }
     &__scroll_icon {
         width: 1.2rem;
         margin: 0;
         transition: transform 0.3s;
+        pointer-events: none;
     }
 }
 

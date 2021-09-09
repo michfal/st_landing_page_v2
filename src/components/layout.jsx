@@ -9,6 +9,7 @@ import Contests from './sections/contests/Contest.component'
 import CurrentMaterial from './sections/currentMaterial/CurrentMaterial.component'
 import Contact from './sections/contact/Contact.components'
 import Navbar from './navbar/Navbar.component'
+import Footer from './sections/footer/Footer.component'
 
 import {thematicScope, sectionTexts} from '../mock/data'
 
@@ -24,7 +25,6 @@ const Layout = () => {
     setText(sectionTexts)
   }, [])
 
-  // console.log(texts.elementaryEgzam)
 
   return (
     <>
@@ -33,10 +33,11 @@ const Layout = () => {
       <Offer />
       <CourseStructure />
       <ElementaryEgzam info={scopeData.elementaryEgzam} paragraph={texts.elementaryEgzam}/>
-      <Finals info={scopeData.finals}/>
-      <Contests />
-      <CurrentMaterial />
+      <Finals info={scopeData.finals} paragraph={texts.finals}/>
+      <Contests paragraph={texts.contest}/>
+      <CurrentMaterial paragraph={texts.currentMaterial}/>
       <Contact />
+      <Footer />
     </>
   )
 }

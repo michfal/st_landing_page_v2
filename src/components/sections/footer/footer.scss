@@ -1,0 +1,13 @@
+@import '../../../style/abstracts/variables';
+@import '../../../style/abstracts/mixins';
+
+.footer {
+    height: 4rem;
+    background-color: $gray-light;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    &__element {
+        margin: auto 1rem;
+    }
+}

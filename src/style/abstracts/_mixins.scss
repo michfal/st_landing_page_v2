@@ -7,3 +7,9 @@
     min-width: 16rem;
 }
 
+
+@mixin sections_layout {
+    padding-top: 5.5rem;
+    display: flex;
+    flex-direction: column;
+}
