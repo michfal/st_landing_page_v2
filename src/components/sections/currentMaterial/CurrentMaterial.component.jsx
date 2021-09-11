@@ -8,7 +8,7 @@ const CurrentMaterial = (props) => {
     const {paragraph} = props
 
     return (
-        <section className="currentMaterial">
+        <section id="current_material" className="current_material">
             <OvalHeader headerText="Opracowanie Bieżącego Materiału" bgColor="background-green"/>
             <ParagraphText paragraph={paragraph}/>
         </section>

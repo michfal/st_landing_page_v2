@@ -1,34 +1,5 @@
 @import '../../style/abstracts/variables';
 
-.navbar {
-    width: 100vw;
-    height: 4rem;
-    background-color: $primary-dark;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1rem;
-    position: fixed;
-    &__icon {
-        height: 70%;
-        margin: 0;
-        pointer-events: none;
-    }
-    &__button {
-        background-color: transparent;
-        border: none;
-        height: 2rem;
-        width: 3.5rem;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        &_icon {
-            margin: 0;
-        }
-    }
-}
-
-
 .mobile_menu {
     background-color: $secondary-dark;
     opacity: 0.97;
@@ -52,8 +23,7 @@
         &_item {
             margin-bottom: 1rem;
         }
-    }
-    
+    } 
 }
 
 .menu_display {

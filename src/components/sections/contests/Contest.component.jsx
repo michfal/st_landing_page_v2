@@ -9,7 +9,7 @@ const Contests = (props) => {
 
     const {paragraph} = props
     return (
-        <section className="contest">
+        <section id="contest" className="contest">
             <OvalHeader headerText="Przygotowanie do konkursów" bgColor="background-orange"/>
             <ParagraphText paragraph={paragraph}/>
         </section>

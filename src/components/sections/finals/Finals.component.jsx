@@ -11,7 +11,7 @@ const Finals = (props) => {
     const {info, paragraph} = props
 
     return (
-        <section className="finals">
+        <section id="finals" className="finals">
             <OvalHeader headerText="Egzamin Maturalny" bgColor="background-green"/>
             <ParagraphText paragraph={paragraph}/>
             <LearningPlan info={info} bgColor="background-green"/>

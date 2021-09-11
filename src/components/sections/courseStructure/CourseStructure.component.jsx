@@ -6,7 +6,7 @@ import './courseStructure.scss'
 
 const CourseStructure = () => {
     return (
-        <section className="structure">
+        <section id="structure" className="structure">
             <h3 className="structure__header txt_gray txt_gray--header">Całość składa się z:</h3>
             <div className="structure__oval_headers">
                 <OvalHeader headerText="36 spotkań po 60 minut" bgColor="background-green"/>

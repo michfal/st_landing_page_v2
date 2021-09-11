@@ -1,7 +1,4 @@
 import React from 'react'
-import OvalHeader from '../../ovalHeader/OvalHeader.component'
-import atIcon from '../../../images/icon_at.svg'
-import phoneIcon from '../../../images/icon_phone.svg'
 
 import './footer.scss'
 
