@@ -7,7 +7,7 @@ import './contact.scss'
 
 const Contact = () => {
     return (
-        <section className="contact">
+        <section id="contact" className="contact">
             <OvalHeader headerText="Kontakt" bgColor="background-blue" width="oval_header--narrow"/>
             <div className="contact__info">
                 <div className="contact__info_element">

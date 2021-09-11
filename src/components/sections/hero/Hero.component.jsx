@@ -1,5 +1,6 @@
 import React from 'react'
 // import Fade from 'react-reveal/Fade'
+import { Link } from 'react-scroll'
 
 import './hero.scss'
 
@@ -10,7 +11,10 @@ const Hero = () => {
     return(
         <section className="hero">
             <img className="hero__logo" src={logo} alt="st logo" />
-            <img className="hero__scroll_icon" src={downArrowIcon} alt="down arrow icon" />
+            <Link activeClass="active" to="offer" spy={true} smooth={true} duration={1000}>
+                <img className="hero__scroll_icon" src={downArrowIcon} alt="down arrow icon" />
+            </Link>
+            
         </section>
     )
 };

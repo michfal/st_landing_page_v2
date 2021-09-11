@@ -11,7 +11,7 @@ const ElementaryEgzam = (props) => {
     const {info, paragraph} = props
 
     return (
-        <section className="elementary_egzam">
+        <section id="elementary_egzam" className="elementary_egzam">
             <OvalHeader headerText="Egzamin 8-klasisty" bgColor="background-blue"/>
             <ParagraphText paragraph={paragraph}/>
             <LearningPlan info={info} bgColor="background-blue"/>

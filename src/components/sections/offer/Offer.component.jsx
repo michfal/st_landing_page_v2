@@ -9,7 +9,7 @@ import './offer.scss'
 
 const Offer = () => {
     return (
-        <section className="offer">
+        <section id="offer" className="offer">
             <h1 className="offer__header txt_purple">Oferuję korepetycje z matematyki, pod kątem:</h1>
             <div className="offer__list">
                 <div className="offer__list_element">
