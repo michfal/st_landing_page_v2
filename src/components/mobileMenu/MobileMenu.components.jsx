@@ -4,7 +4,6 @@ import { Link } from 'react-scroll'
 import './mobileMenu.scss'
 
 import hamburgerIcon from '../../images/icon_hamburger.svg'
-import owl_icon from '../../images/icon_owl_home.svg'
 
 
 const btnClick = (e) => {
