@@ -3,7 +3,6 @@
 .offer {
     height: 100vh;
     padding-top: 5.5rem;
-    // border: 1px solid red;
     @media only screen and (min-height: $size-large) {
         height: 50vh;
     }
@@ -30,13 +29,11 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        // border: 1px solid blue;
         @media only screen and (min-width: $size-medium) {
             flex-direction: row;
             align-items: flex-start;
         }
         &_column {
-            // border: 1px solid green;
             height: 50%;
             width: 50%;
             min-width: 11rem;
@@ -44,7 +41,6 @@
             flex-direction: column;
         }
         &_element {
-            // border: 1px solid red;
             margin: auto;
             width: 60%;
             height: 3rem;

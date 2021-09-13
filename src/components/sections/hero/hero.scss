@@ -2,10 +2,10 @@
 
 .hero {
     height: 100vh;
-    background-image: url("../../../images/main_bg.svg");
+    // background-image: url("../../../images/main_bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #6a5bc5;
+    // background-color: #6a5bc5;
     background-position: center;
     display: flex;
     align-items: center;
@@ -25,6 +25,12 @@
       width: 3.5rem;
       margin-bottom: 4.5rem;
       cursor: pointer;
+    }
+    &__background {
+      // width: 100vw;
+      height: 100vh;
+      position: absolute;
+      z-index: -1;
     }
   }
 
