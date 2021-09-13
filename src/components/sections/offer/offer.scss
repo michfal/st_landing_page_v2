@@ -3,6 +3,10 @@
 .offer {
     height: 100vh;
     padding-top: 5.5rem;
+    // border: 1px solid red;
+    @media only screen and (min-height: $size-large) {
+        height: 50vh;
+    }
     &__header {
         margin: 0rem 1rem 2rem 1rem;
         text-align: center;
@@ -17,27 +21,48 @@
         border-radius: 2px;
         margin: 0.5rem auto;
     }
-}
-
-.offer__list {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    &_element {
+    &__list {
+        height: 80%;
+        width: 80vw;
+        max-height: 25rem;
         margin: auto;
-        width: 60%;
-        height: 3rem;
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-    &_text {
-        margin: 0 0 0 1rem;
-        display: inline;
+        // border: 1px solid blue;
+        @media only screen and (min-width: $size-medium) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        &_column {
+            // border: 1px solid green;
+            height: 50%;
+            width: 50%;
+            min-width: 11rem;
+            display: flex;
+            flex-direction: column;
+        }
+        &_element {
+            // border: 1px solid red;
+            margin: auto;
+            width: 60%;
+            height: 3rem;
+            min-width: 10rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        &_text {
+            margin: 0 0 0 1rem;
+            display: inline;
+            }
         }
     }
 }
+
+
+
+
 
 .element_icon {
     height: 100%;

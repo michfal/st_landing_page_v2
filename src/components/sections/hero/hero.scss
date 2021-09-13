@@ -1,5 +1,6 @@
+@import '../../../style/abstracts/variables';
+
 .hero {
-    // width: 100vw;
     height: 100vh;
     background-image: url("../../../images/main_bg.svg");
     background-repeat: no-repeat;
@@ -14,8 +15,11 @@
     &__logo {
       width: 35vw;
       min-width: 16rem;
-      // max-width: 50rem;
       margin-top: 40vh;
+      @media only screen and (min-width: $size-medium) {
+        width: 50vw;
+        min-width: 20rem;
+      }
     }
     &__scroll_icon {
       width: 3.5rem;
