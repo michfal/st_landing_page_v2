@@ -1,9 +1,12 @@
 @import '../../../style/abstracts/variables';
 
 .offer {
+    border: 1px solid red;
     height: 100vh;
+    min-height: 50vh;
+    max-height: 50rem;
     padding-top: 5.5rem;
-    @media only screen and (min-height: $size-large) {
+    @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
         height: 50vh;
     }
     &__header {
@@ -29,11 +32,12 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        @media only screen and (min-width: $size-medium) {
+        @media only screen and (min-width: $size-small) {
             flex-direction: row;
             align-items: flex-start;
         }
         &_column {
+            // height: 10rem;
             height: 50%;
             width: 50%;
             min-width: 11rem;

@@ -12,9 +12,11 @@
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: column;
+
     &__logo {
       width: 35vw;
       min-width: 16rem;
+      max-width: 30rem;
       margin-top: 40vh;
       @media only screen and (min-width: $size-medium) {
         width: 50vw;
