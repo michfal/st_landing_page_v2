@@ -15,9 +15,9 @@ const CourseStructure = () => {
             </div>
 
             <ul className="structure__list">
-                <li className="txt_gray txt_gray-point structure__list_point">Ilość spotkań jest uzależniona od indywidualnych możliwości i umiejętności ucznia</li>
-                <li className="txt_gray txt_gray-point structure__list_point">Pierwsze spotkanie zawsze obejmuje poznanie wymagań i dostosowanie planu nauki</li>
-                <li className="txt_gray txt_gray-point structure__list_point">Możliwe konsultacje online</li>
+                <li className="txt_gray txt_gray--point structure__list_point">Ilość spotkań jest uzależniona od indywidualnych możliwości i umiejętności ucznia</li>
+                <li className="txt_gray txt_gray--point structure__list_point">Pierwsze spotkanie zawsze obejmuje poznanie wymagań i dostosowanie planu nauki</li>
+                <li className="txt_gray txt_gray--point structure__list_point">Możliwe konsultacje online</li>
             </ul>
         </section>
     )

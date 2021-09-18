@@ -1,9 +1,14 @@
 @import '../../../style/abstracts/variables';
+@import '../../../style/abstracts/mixins';
 
 .structure {
     height: 100vh;
     padding-top: 5.5rem;
+    @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
+        height: 60vh;
+    }
     &__oval_headers {
+        border: 1px solid red;
         margin: 1.5rem auto;
         min-height: 30%;
         display: flex;
@@ -17,7 +22,7 @@
         width: 80%;
         &_point {
             list-style: none;
-            margin-top: 1rem;
+            margin-top: 3rem;
             line-height: 2rem;
             &::before {
                 content:'';
@@ -38,6 +43,10 @@
         border-radius: 2px;
         margin: 0.5rem auto;
         max-width: 15rem;
+        @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
+            @include content_width;
+            border: 2px solid $gray;
+        }
     }
     
 }

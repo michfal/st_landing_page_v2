@@ -5,7 +5,6 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import './hero.scss'
 
-import logo from '../../../images/st_logo.svg'
 import downArrowIcon from '../../../images/arrow.svg'
 
 const Hero = () => {

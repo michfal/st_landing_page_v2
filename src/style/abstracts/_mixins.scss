@@ -5,11 +5,20 @@
     width: 80%;
     max-width: 18rem;
     min-width: 16rem;
+    @media only screen and (min-width: $size-medium) {
+        max-width: 30rem;
+        min-width: 16rem;
+    }
 }
 
 
 @mixin sections_layout {
-    padding-top: 5.5rem;
+    padding: 5.5rem 0 3rem 0;
     display: flex;
     flex-direction: column;
+}
+
+@mixin background_image {
+    position: absolute;
+    z-index: -1;
 }

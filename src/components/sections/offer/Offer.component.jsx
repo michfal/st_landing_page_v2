@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { StaticImage } from "gatsby-plugin-image"
+
 import elementaryIcon from '../../../images/icon_elementary.svg'
 import contestIcon from '../../../images/icon_contest.svg'
 import finalsIcon from '../../../images/icon_finals.svg'
@@ -33,6 +35,20 @@ const Offer = () => {
                     </div>
                 </div>
             </div>
+            <StaticImage 
+                className="offer__a_square_l" 
+                src="../../../images/a_square.svg" 
+                alt="st logo"
+                placeholder="none"
+                quality="100"
+            />
+            <StaticImage 
+                className="offer__a_square_r" 
+                src="../../../images/a_square.svg" 
+                alt="st logo"
+                placeholder="none"
+                quality="100"
+            />
         </section>
     )
 }
