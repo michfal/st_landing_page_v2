@@ -4,4 +4,11 @@
 
 .finals {
     @include sections_layout;
+    position: relative;
+}
+
+.blob_position-finals_tablet {
+    width: 40%;
+    left: 30%;
+    top: 10%;
 }
