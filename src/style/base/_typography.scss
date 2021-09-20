@@ -38,7 +38,7 @@ a:hover {
     font-weight: 700;
   }
   &--footer {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -46,7 +46,7 @@ a:hover {
   color: $gray;
   text-align: center;
   &--point {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     @media only screen and (min-width: $size-medium) {
       font-size: 1.2rem;
     }
@@ -72,7 +72,10 @@ a:hover {
     font-size: 1.3rem;
   }
   &--learning_plan {
-    font-size: 0.9rem
+    font-size: 0.8rem;
+    @media only screen and (min-width: $size-medium) {
+      font-size: 0.9rem;
+    }
   }
 }
 

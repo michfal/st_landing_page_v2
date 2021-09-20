@@ -4,9 +4,6 @@
 .structure {
     height: 100vh;
     padding-top: 5.5rem;
-    // @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
-    //     height: 80vh;
-    // }
     position: relative;
     &__oval_headers {
         margin: 1.5rem auto;
@@ -26,7 +23,7 @@
         width: 80%;
         &_point {
             list-style: none;
-            margin-top: 3rem;
+            margin-top: 1.5rem;
             line-height: 2rem;
             &::before {
                 content:'';
@@ -40,15 +37,22 @@
         }
     }
     &__a_square_l {
-        @include background_image;
-        top: 45%;
-        left: 10%;
+        display: none;
+        @media only screen and (min-width: $size-medium) {
+            display: block;
+            @include background_image;
+            top: 45%;
+            left: 10%;
+        } 
     }
     &__square_root_r {
-        @include background_image;
-        top: 45%;
-        right: 10%;
-        // width: 3rem;
+        display: none;
+        @media only screen and (min-width: $size-medium) {
+            display: block;
+            @include background_image;
+            top: 45%;
+            right: 10%;
+        }   
     }
     &__header:after {
         content:'';
@@ -63,6 +67,5 @@
             border: 2px solid $gray;
         }
     }
-    
 }
 

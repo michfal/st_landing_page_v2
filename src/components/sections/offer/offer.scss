@@ -2,7 +2,6 @@
 @import '../../../style/abstracts/mixins';
 
 .offer {
-    // border: 1px solid red;
     height: 100vh;
     min-height: 50vh;
     max-height: 50rem;
@@ -39,7 +38,6 @@
             align-items: flex-start;
         }
         &_column {
-            // height: 10rem;
             height: 50%;
             width: 50%;
             min-width: 11rem;
@@ -61,21 +59,26 @@
         }
     }
     &__a_square_l {
-        @include background_image;
-        top: 60%;
-        left: 3%;
+        display: none;
+        @media only screen and (min-width: $size-medium) {
+            display: block;
+            @include background_image;
+            top: 60%;
+            left: 3%;
+        }   
     }
+
     &__a_square_r {
-        @include background_image;
-        top: 80%;
-        right: 10%;
-        width: 3rem;
+        display: none;
+        @media only screen and (min-width: $size-medium) {
+            display: block;
+            @include background_image;
+            top: 80%;
+            right: 10%;
+            width: 3rem;
+        }   
     }
 }
-
-
-
-
 
 .element_icon {
     height: 100%;
