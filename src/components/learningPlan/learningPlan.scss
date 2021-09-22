@@ -37,14 +37,28 @@
     height: 0;
     transform: scale(0);
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    @media only screen and (min-width: $size-medium) {
+        width: 90%;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     &--border_blue {
         border: 0.3rem solid $blue-green;
     }
     &__item {
+        // border: 1px solid green;
         margin: 1.5rem auto;
         width: 90%;;
         display: flex;
         align-items: center;
+        @media only screen and (min-width: $size-medium) {
+            width: 45%;
+            margin: 1.5rem auto;
+        }
         &_point {
             background-color: $blue-green;
             width: 2.5rem;
