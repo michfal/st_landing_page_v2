@@ -3,6 +3,8 @@ import React from 'react'
 import OvalHeader from '../../ovalHeader/OvalHeader.component'
 import ParagraphText from '../../paragraphText/ParagraphText.component'
 
+import './CurrentMaterial.scss'
+
 const CurrentMaterial = (props) => {
 
     const {paragraph} = props

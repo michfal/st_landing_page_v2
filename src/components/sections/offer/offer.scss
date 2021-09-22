@@ -1,8 +1,15 @@
 @import '../../../style/abstracts/variables';
+@import '../../../style/abstracts/mixins';
 
 .offer {
     height: 100vh;
+    min-height: 50vh;
+    max-height: 50rem;
     padding-top: 5.5rem;
+    position: relative;
+    @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
+        height: 50vh;
+    }
     &__header {
         margin: 0rem 1rem 2rem 1rem;
         text-align: center;
@@ -17,25 +24,59 @@
         border-radius: 2px;
         margin: 0.5rem auto;
     }
-}
-
-.offer__list {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    &_element {
+    &__list {
+        height: 80%;
+        width: 80vw;
+        max-height: 25rem;
         margin: auto;
-        width: 60%;
-        height: 3rem;
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-    &_text {
-        margin: 0 0 0 1rem;
-        display: inline;
+        @media only screen and (min-width: $size-small) {
+            flex-direction: row;
+            align-items: flex-start;
         }
+        &_column {
+            height: 50%;
+            width: 50%;
+            min-width: 11rem;
+            display: flex;
+            flex-direction: column;
+        }
+        &_element {
+            margin: auto;
+            width: 60%;
+            height: 3rem;
+            min-width: 10rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        &_text {
+            margin: 0 0 0 1rem;
+            display: inline;
+            }
+        }
+    }
+    &__a_square_l {
+        display: none;
+        @media only screen and (min-width: $size-medium) {
+            display: block;
+            @include background_image;
+            top: 60%;
+            left: 3%;
+        }   
+    }
+
+    &__a_square_r {
+        display: none;
+        @media only screen and (min-width: $size-medium) {
+            display: block;
+            @include background_image;
+            top: 80%;
+            right: 10%;
+            width: 3rem;
+        }   
     }
 }
 

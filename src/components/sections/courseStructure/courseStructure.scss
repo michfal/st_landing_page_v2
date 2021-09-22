@@ -1,8 +1,10 @@
 @import '../../../style/abstracts/variables';
+@import '../../../style/abstracts/mixins';
 
 .structure {
     height: 100vh;
     padding-top: 5.5rem;
+    position: relative;
     &__oval_headers {
         margin: 1.5rem auto;
         min-height: 30%;
@@ -11,14 +13,21 @@
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
+        @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
+            min-height: 40%;
+            padding: 4rem 0 4rem 0;
+        }
     }
     &__list {
         margin: auto;
         width: 80%;
         &_point {
             list-style: none;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
             line-height: 2rem;
+            @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
+                margin-top: 3rem;
+            }
             &::before {
                 content:'';
                 display: inline-block;
@@ -30,6 +39,24 @@
             }
         }
     }
+    &__a_square_l {
+        display: none;
+        @media only screen and (min-width: $size-medium) {
+            display: block;
+            @include background_image;
+            top: 45%;
+            left: 10%;
+        } 
+    }
+    &__square_root_r {
+        display: none;
+        @media only screen and (min-width: $size-medium) {
+            display: block;
+            @include background_image;
+            top: 45%;
+            right: 10%;
+        }   
+    }
     &__header:after {
         content:'';
         display: block;
@@ -38,7 +65,10 @@
         border-radius: 2px;
         margin: 0.5rem auto;
         max-width: 15rem;
+        @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
+            @include content_width;
+            border: 2px solid $gray;
+        }
     }
-    
 }
 

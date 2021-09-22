@@ -4,4 +4,15 @@
 
 .finals {
     @include sections_layout;
+    position: relative;
+}
+
+.blob_position-finals_tablet {
+    display: none;
+    @media only screen and (min-width: $size-medium) {
+        display: block;
+        width: 40%;
+        left: 30%;
+        top: 10%;
+    } 
 }

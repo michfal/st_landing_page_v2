@@ -15,13 +15,6 @@ const setColor = (i) => {
     }
 }
 
-// const planOpen = () => {
-//     console.log("open")
-//     const content = document.querySelector('.lp_content')
-//     const arrow = document.querySelector('.learning_plan__scroll_icon')
-//     content.classList.toggle("learning_plan_display") 
-//     arrow.classList.toggle("lp_arrow_rotate") 
-// }
 
 const planOpen = (e) => {
 
@@ -32,10 +25,10 @@ const planOpen = (e) => {
     arrow.classList.toggle("lp_arrow_rotate") 
 }
 
-const planItem = (info) => {
+const planItem = (info, border) => {
 
     return (
-        <div className="lp_content">{
+        <div className={`lp_content ${border}`}>{
             info.map((e, i) => {
                 setColor(i)      
                 return (
@@ -52,7 +45,7 @@ const planItem = (info) => {
 }
 
 function LearningPlan(props) {
-    const {info, bgColor} = props
+    const {info, bgColor, border} = props
     const list = info !== undefined
 
     return (
@@ -63,7 +56,7 @@ function LearningPlan(props) {
                     <h1 className="txt_white txt_white--learning_plan">Przykładowy Program</h1>
                 </div>
 
-                {list ? planItem(info) : null}
+                {list ? planItem(info, border) : null}
             </div>
 
         </>

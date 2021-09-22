@@ -9,6 +9,10 @@
     justify-content: space-between;
     padding: 0 1rem;
     position: fixed;
+    z-index: 2;
+    @media only screen and (min-width: $size-medium) {
+        padding: 0 2rem;
+      }
     &__icon {
         height: 70%;
         margin: 0;

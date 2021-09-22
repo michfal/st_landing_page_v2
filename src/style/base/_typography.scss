@@ -18,7 +18,6 @@ a:hover {
   font-size: $big-font-size;
   font-weight: bold;
   text-transform: uppercase;
-
 }
 
 .txt_purple {
@@ -29,6 +28,9 @@ a:hover {
     line-height: 3rem;
     font-weight: 400;
     text-align: center;
+    @media only screen and (min-width: $size-medium) {
+      font-size: 1.2rem;
+    }
   }
   &--point {
     font-size: 1.1rem;
@@ -36,7 +38,7 @@ a:hover {
     font-weight: 700;
   }
   &--footer {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -44,12 +46,17 @@ a:hover {
   color: $gray;
   text-align: center;
   &--point {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    @media only screen and (min-width: $size-medium) {
+      font-size: 1.2rem;
+    }
   }
   &--header {
     font-size: 1.5rem;
     font-weight: 400;
-    // margin: auto;
+    @media only screen and (min-width: $size-medium) {
+      font-size: 2rem;
+    }
   }
   &--thematic_scope {
     text-align: left;
@@ -61,8 +68,14 @@ a:hover {
   color: white;
   text-align: center;
   font-size: 1rem;
+  @media only screen and (min-width: $size-medium) {
+    font-size: 1.3rem;
+  }
   &--learning_plan {
-    font-size: 0.8rem
+    font-size: 0.8rem;
+    @media only screen and (min-width: $size-medium) {
+      font-size: 0.9rem;
+    }
   }
 }
 

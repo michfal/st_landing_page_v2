@@ -1,4 +1,5 @@
 import React from 'react'
+import { StaticImage } from "gatsby-plugin-image"
 
 import OvalHeader from '../../ovalHeader/OvalHeader.component'
 
@@ -14,10 +15,23 @@ const CourseStructure = () => {
                 <OvalHeader headerText="18 spotkań po 120 minut" bgColor="background-blue"/>
             </div>
 
+            <StaticImage 
+                className="structure__a_square_l" 
+                src="../../../images/a_square.svg" 
+                placeholder="none"
+                quality="100"
+            />
+            <StaticImage 
+                className="structure__square_root_r" 
+                src="../../../images/square_root1.svg" 
+                placeholder="none"
+                quality="100"
+            />
+
             <ul className="structure__list">
-                <li className="txt_gray txt_gray-point structure__list_point">Ilość spotkań jest uzależniona od indywidualnych możliwości i umiejętności ucznia</li>
-                <li className="txt_gray txt_gray-point structure__list_point">Pierwsze spotkanie zawsze obejmuje poznanie wymagań i dostosowanie planu nauki</li>
-                <li className="txt_gray txt_gray-point structure__list_point">Możliwe konsultacje online</li>
+                <li className="txt_gray txt_gray--point structure__list_point">Ilość spotkań jest uzależniona od indywidualnych możliwości i umiejętności ucznia</li>
+                <li className="txt_gray txt_gray--point structure__list_point">Pierwsze spotkanie zawsze obejmuje poznanie wymagań i dostosowanie planu nauki</li>
+                <li className="txt_gray txt_gray--point structure__list_point">Możliwe konsultacje online</li>
             </ul>
         </section>
     )

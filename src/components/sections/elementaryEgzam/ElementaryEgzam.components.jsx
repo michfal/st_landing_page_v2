@@ -14,7 +14,7 @@ const ElementaryEgzam = (props) => {
         <section id="elementary_egzam" className="elementary_egzam">
             <OvalHeader headerText="Egzamin 8-klasisty" bgColor="background-blue"/>
             <ParagraphText paragraph={paragraph}/>
-            <LearningPlan info={info} bgColor="background-blue"/>
+            <LearningPlan info={info} bgColor="background-blue" border="lp_content--border_blue"/>
         </section>
     )
 }
