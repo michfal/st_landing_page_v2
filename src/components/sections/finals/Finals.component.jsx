@@ -9,10 +9,8 @@ import Blob from '../../blob/Blob.component'
 import './finals.scss'
 
 const Finals = (props) => {
-    //This doesn't work on scren resize has to be refactored with "useEffect" hook
-    const width = window.screen.width;
+   
     const {info, paragraph} = props
-
 
     return (
         <section id="finals" className="finals">

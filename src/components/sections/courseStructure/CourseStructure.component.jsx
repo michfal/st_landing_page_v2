@@ -17,13 +17,15 @@ const CourseStructure = () => {
 
             <StaticImage 
                 className="structure__a_square_l" 
-                src="../../../images/a_square.svg" 
+                src="../../../images/a_square.svg"
+                alt=""
                 placeholder="none"
                 quality="100"
             />
             <StaticImage 
                 className="structure__square_root_r" 
-                src="../../../images/square_root1.svg" 
+                src="../../../images/square_root1.svg"
+                alt="" 
                 placeholder="none"
                 quality="100"
             />

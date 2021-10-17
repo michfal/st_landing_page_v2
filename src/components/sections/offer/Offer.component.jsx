@@ -39,13 +39,15 @@ const Offer = () => {
 
             <StaticImage 
                 className="offer__a_square_l" 
-                src="../../../images/a_square.svg" 
+                src="../../../images/a_square.svg"
+                alt=""
                 placeholder="none"
                 quality="100"
             />
             <StaticImage 
                 className="offer__a_square_r" 
-                src="../../../images/a_square.svg" 
+                src="../../../images/a_square.svg"
+                alt="" 
                 placeholder="none"
                 quality="100"
             />                

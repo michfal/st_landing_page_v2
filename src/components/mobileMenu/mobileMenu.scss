@@ -1,6 +1,6 @@
 @import '../../style/abstracts/variables';
 
-.mobile_menu {
+.menu {
     background-color: $secondary-dark;
     opacity: 0.97;
     z-index: 1;
@@ -8,22 +8,38 @@
     top: 4rem;
     right: 0;
     border-radius: 0 0 0 0.5rem;
+    width: 18rem;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
     overflow: hidden;
     transform-origin: top right;
     transform: scale(0);
     transition: transform 0.2s;
-    &__list {
-        padding: 1rem 2rem;
-        list-style-type: none;
-        color: white;
-        font-size: 0.7rem;
-        word-wrap: normal;
-        line-height: 1.8rem;
-        text-align: right;
-        &_item {
-            margin-bottom: 1rem;
+    @media screen and (min-width: $size-large) {
+        transform: scale(1);
+        position: initial;
+        background-color: $primary-dark;
+        margin: auto;
+        width: 80%;
+        height: 100%;
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    &__item {
+        margin-bottom: 2rem;
+        word-break: normal;
+        @media screen and (min-width: $size-large) {
+            max-width: 8rem;
+            text-align: left;
+            margin: 1rem;;
+            line-height: 1.3rem;
+            cursor:pointer;
         }
-    } 
+    }
+
 }
 
 .menu_display {
