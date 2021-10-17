@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 
-import './mobileMenu.scss'
+import './menu.scss'
 
 import hamburgerIcon from '../../images/icon_hamburger.svg'
 
@@ -11,7 +11,7 @@ const btnClick = (e) => {
     element.classList.toggle("menu_display")  
 }
 
-const MobileMenu = () => {
+const Menu = () => {
     return (
         // <div className="menu">
         <>
@@ -47,4 +47,4 @@ const MobileMenu = () => {
     )
 }
 
-export default MobileMenu
+export default Menu

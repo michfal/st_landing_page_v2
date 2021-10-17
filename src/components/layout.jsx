@@ -1,6 +1,5 @@
 
 import React, {useState, useEffect} from 'react'
-import Fade from 'react-reveal/Fade';
 
 import Hero from './sections/hero/Hero.component'
 import Offer from './sections/offer/Offer.component'

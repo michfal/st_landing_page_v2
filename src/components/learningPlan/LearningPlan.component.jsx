@@ -50,7 +50,7 @@ function LearningPlan(props) {
 
     return (
         <>  
-            <div className="learning_plan" onClick={planOpen}>
+            <div role={"button"} tabIndex={0} className="learning_plan" onClick={planOpen}>
                 <div className={`learning_plan__header ${bgColor}`} >
                     <img className="learning_plan__scroll_icon" src={downArrowIcon} alt="down arrow icon"  />
                     <h1 className="txt_white txt_white--learning_plan">Przykładowy Program</h1>
