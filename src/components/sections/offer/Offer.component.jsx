@@ -1,16 +1,18 @@
 import React from 'react'
 
 import { StaticImage } from "gatsby-plugin-image"
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-reveal/Fade'
 
 import elementaryIcon from '../../../images/icon_elementary.svg'
 import contestIcon from '../../../images/icon_contest.svg'
 import finalsIcon from '../../../images/icon_finals.svg'
 import currentIcon from '../../../images/icon_current.svg'
+import Blob from '../../blob/Blob.component'
 
 import './offer.scss'
 
-const Offer = () => {
+const Offer = ({scrSize}) => {
+    console.log(scrSize)
     return (
         <section id="offer" className="offer">
             <Fade top duration={1000}>
@@ -39,6 +41,8 @@ const Offer = () => {
                     </div>
                 </div>
             </div>
+            {(scrSize === 'large') ? <Blob position={"blob_position-finals_tablet"} color={"blob_fill-light_green"}/>: null}
+            
 
             <StaticImage 
                 className="offer__a_square_l" 
