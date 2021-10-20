@@ -10,11 +10,17 @@
     @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
         height: 50vh;
     }
+    @media only screen and (min-width: $size-large) {
+        padding-top: 6rem;
+    }    
     &__header {
         margin: 0rem 1rem 2rem 1rem;
         text-align: center;
         padding-right: 1rem;
         line-height: 1.5rem;
+        @media only screen and (min-width: $size-large) {
+            margin: 0rem 1rem 3rem 1rem;
+        }
     }
     &__header:after {
         content:'';
@@ -23,6 +29,9 @@
         background-color: $secondary-dark;
         border-radius: 2px;
         margin: 0.5rem auto;
+        @media only screen and (min-width: $size-large) {
+            max-width: 50rem;
+        }
     }
     &__list {
         height: 80%;
@@ -36,6 +45,10 @@
         @media only screen and (min-width: $size-small) {
             flex-direction: row;
             align-items: flex-start;
+            @media only screen and (min-width: $size-large) {
+                border: 1px solid green;
+                max-width: 40rem;
+            }
         }
         &_column {
             height: 50%;
@@ -65,7 +78,10 @@
             @include background_image;
             top: 60%;
             left: 3%;
-        }   
+        }
+        @media only screen and (min-width: $size-large) {
+            left: 10%;
+        }
     }
 
     &__a_square_r {
@@ -76,6 +92,9 @@
             top: 80%;
             right: 10%;
             width: 3rem;
+        }
+        @media only screen and (min-width: $size-large) {
+            right: 15%;
         }   
     }
 }

@@ -13,7 +13,6 @@ const btnClick = (e) => {
 
 const Menu = () => {
     return (
-        // <div className="menu">
         <>
             <button className="navbar__button" onClick={btnClick}>
                 <img className="navbar__button_icon" src={hamburgerIcon} alt="menu icon"/>
@@ -41,8 +40,6 @@ const Menu = () => {
                     Kontakt
                 </Link>
             </div>
-        
-        {/* </div> */}
         </>
     )
 }

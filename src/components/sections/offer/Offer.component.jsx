@@ -13,7 +13,10 @@ import './offer.scss'
 const Offer = () => {
     return (
         <section id="offer" className="offer">
-            <h1 className="offer__header txt_purple">Oferuję korepetycje z matematyki, pod kątem:</h1>
+            <Fade top duration={1000}>
+                <h1 className="offer__header txt_purple">Oferuję korepetycje z matematyki, pod kątem:</h1>
+            </Fade>
+            
             <div className="offer__list">
                 <div className="offer__list_column">
                     <div className="offer__list_element">
