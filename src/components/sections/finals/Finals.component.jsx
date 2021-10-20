@@ -10,14 +10,14 @@ import './finals.scss'
 
 const Finals = (props) => {
    
-    const {info, paragraph} = props
+    const {info, paragraph, scrSize} = props
 
     return (
         <section id="finals" className="finals">
             <OvalHeader headerText="Egzamin Maturalny" bgColor="background-green"/>
             <ParagraphText paragraph={paragraph}/>
             <LearningPlan info={info} bgColor="background-green"/>
-            <Blob position={"blob_position-finals_tablet"} color={"blob_fill-light_green"}/>
+            {(scrSize === 'medium' || scrSize === 'large') ? <Blob position={"blob_position-finals_tablet"} color={"blob_fill-light_green"}/>: null}
         </section>
     )
 }

@@ -11,30 +11,36 @@ import CurrentMaterial from './sections/currentMaterial/CurrentMaterial.componen
 import Contact from './sections/contact/Contact.components'
 import Navbar from './navbar/Navbar.component'
 import Footer from './sections/footer/Footer.component'
+import GetScreenSize from './getScreenSize/getScreenSize'
 
 import {thematicScope, sectionTexts} from '../mock/data'
 
 import '../style/main.scss'
 
-const Layout = () => {
 
+
+const Layout = () => {
+  
   const [scopeData, setScope] = useState({})
   const [texts, setText] = useState({})
+  const [scrSize, setScrSize] = useState('small')
 
   useEffect(() => {
     setScope(thematicScope);
-    setText(sectionTexts)
+    setText(sectionTexts);
+    setScrSize(GetScreenSize())
   }, [])
 
+// console.log(scrSize)
 
   return (
     <>
       <Navbar />
       <Hero />
-      <Offer />
+      <Offer scrSize={scrSize}/>
       <CourseStructure />
       <ElementaryEgzam info={scopeData.elementaryEgzam} paragraph={texts.elementaryEgzam}/>
-      <Finals info={scopeData.finals} paragraph={texts.finals}/>
+      <Finals scrSize={scrSize} info={scopeData.finals} paragraph={texts.finals}/>
       <Contests paragraph={texts.contest}/>
       <CurrentMaterial paragraph={texts.currentMaterial}/>
       <Contact />
