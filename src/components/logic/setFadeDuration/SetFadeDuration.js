@@ -1,4 +1,4 @@
-const SetFadeDuration = (size) => {
+export const SetFadeDuration = (size) => {
     console.log(size)
     const duration = {
         'large': 1000,
@@ -8,4 +8,4 @@ const SetFadeDuration = (size) => {
     return duration[size]
 }
 
-export default SetFadeDuration
+// export default SetFadeDuration

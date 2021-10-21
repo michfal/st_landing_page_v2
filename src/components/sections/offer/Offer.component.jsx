@@ -8,18 +8,20 @@ import contestIcon from '../../../images/icon_contest.svg'
 import finalsIcon from '../../../images/icon_finals.svg'
 import currentIcon from '../../../images/icon_current.svg'
 import Blob from '../../blob/Blob.component'
-import SetFadeDuration from '../../logic/setFadeDuration/SetFadeDuration'
+import {SetFadeDuration} from '../../logic/setFadeDuration/SetFadeDuration'
 
 import './offer.scss'
 
 const Offer = ({scrSize}) => {
+    const duration = SetFadeDuration(scrSize)
     return (
         <section id="offer" className="offer">
-            <Fade top duration={SetFadeDuration(scrSize)}>
+            <Fade top duration={duration}>
                 <h1 className="offer__header txt_purple">Oferuję korepetycje z matematyki, pod kątem:</h1>
             </Fade>
             
             <div className="offer__list">
+                <Fade left duration={duration}>
                 <div className="offer__list_column">
                     <div className="offer__list_element">
                         <img className="element_icon" src={elementaryIcon} alt="elementary icon"></img>
@@ -30,6 +32,8 @@ const Offer = ({scrSize}) => {
                         <h2 className="offer__list_element_text txt_purple txt_purple--point">Egzaminu <br/> Maturalnego</h2>
                     </div>
                 </div>
+                </Fade>
+                <Fade right duration={duration}>
                 <div className="offer__list_column">
                     <div  className="offer__list_element">
                         <img className="element_icon" src={finalsIcon} alt="finals icon"></img>
@@ -40,6 +44,7 @@ const Offer = ({scrSize}) => {
                         <h2 className="offer__list_element_text txt_purple txt_purple--point">Bierzącego <br/> Materiału</h2>
                     </div>
                 </div>
+                </Fade>
             </div>
             {(scrSize === 'large') ? <Blob position={"blob_position-offer_left"} color={"blob_fill-violet"}/>: null}
             {(scrSize === 'large') ? <Blob position={"blob_position-offer_right"} color={"blob_fill-violet"}/>: null}
