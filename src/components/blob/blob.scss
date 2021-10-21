@@ -1,12 +1,17 @@
-@import '../../style/abstracts/variables';
 @import '../../style/abstracts/mixins';
 
 .blob {
     @include background_image;
-    top: 60%;
-    left: 30%;
 }
 
 .blob_fill-light_green {
-    fill:$blob-light-green;
+    fill: #EFFDFD;;
+}
+
+.blob_fill-violet {
+    fill: #F4F1FE;
+}
+
+.blob_fill-light-violet {
+    fill: #F8F5FE;
 }

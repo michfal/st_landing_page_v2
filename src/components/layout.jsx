@@ -11,7 +11,7 @@ import CurrentMaterial from './sections/currentMaterial/CurrentMaterial.componen
 import Contact from './sections/contact/Contact.components'
 import Navbar from './navbar/Navbar.component'
 import Footer from './sections/footer/Footer.component'
-import GetScreenSize from './getScreenSize/getScreenSize'
+import GetScreenSize from './logic/getScreenSize/GetScreenSize'
 
 import {thematicScope, sectionTexts} from '../mock/data'
 
