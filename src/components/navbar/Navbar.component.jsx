@@ -1,5 +1,6 @@
 import React from 'react'
 import Menu from '../menu/Menu.component'
+import { Link } from 'react-scroll'
 
 import './navbar.scss'
 

@@ -38,11 +38,11 @@ const Layout = () => {
       <Navbar />
       <Hero />
       <Offer scrSize={scrSize}/>
-      <CourseStructure />
-      <ElementaryEgzam info={scopeData.elementaryEgzam} paragraph={texts.elementaryEgzam}/>
+      <CourseStructure scrSize={scrSize}/>
+      <ElementaryEgzam scrSize={scrSize} info={scopeData.elementaryEgzam} paragraph={texts.elementaryEgzam}/>
       <Finals scrSize={scrSize} info={scopeData.finals} paragraph={texts.finals}/>
-      <Contests paragraph={texts.contest}/>
-      <CurrentMaterial paragraph={texts.currentMaterial}/>
+      <Contests scrSize={scrSize} paragraph={texts.contest}/>
+      <CurrentMaterial scrSize={scrSize} paragraph={texts.currentMaterial}/>
       <Contact />
       <Footer />
     </>

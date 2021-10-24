@@ -7,5 +7,3 @@ export const SetFadeDuration = (size) => {
     }
     return duration[size]
 }
-
-// export default SetFadeDuration

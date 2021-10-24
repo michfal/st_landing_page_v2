@@ -5,6 +5,9 @@
     height: 100vh;
     padding-top: 5.5rem;
     position: relative;
+    @media only screen and (min-width: $size-large) {
+        height: 70vh;
+    }
     &__oval_headers {
         margin: 1.5rem auto;
         min-height: 30%;
@@ -17,6 +20,13 @@
             min-height: 40%;
             padding: 4rem 0 4rem 0;
         }
+        @media only screen and (min-width: $size-large) {
+            flex-direction: row;
+            justify-content: center;
+        } 
+    }
+    &__conjunction{
+        margin: auto 2rem;
     }
     &__list {
         margin: auto;
@@ -65,10 +75,28 @@
         border-radius: 2px;
         margin: 0.5rem auto;
         max-width: 15rem;
+        @media only screen and (min-width: $size-large) {
+            border: 1.5px solid $gray;
+            max-width: 20rem;
+        }        
         @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
             @include content_width;
-            border: 2px solid $gray;
         }
     }
 }
 
+.blob_position-structure_left {
+    display: block;
+    height: 20%;
+    min-height: 10rem;
+    left: 20%;
+    top: 30%;
+}
+
+.blob_position-structure_right {
+    display: block;
+    height: 20%;
+    min-height: 10rem;
+    right: 15%;
+    bottom: 10%;
+}

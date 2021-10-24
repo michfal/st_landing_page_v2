@@ -13,15 +13,15 @@ import {SetFadeDuration} from '../../logic/setFadeDuration/SetFadeDuration'
 import './offer.scss'
 
 const Offer = ({scrSize}) => {
-    const duration = SetFadeDuration(scrSize)
+    const dur = SetFadeDuration(scrSize)
     return (
         <section id="offer" className="offer">
-            <Fade top duration={duration}>
+            <Fade top duration={dur}>
                 <h1 className="offer__header txt_purple">Oferuję korepetycje z matematyki, pod kątem:</h1>
             </Fade>
             
             <div className="offer__list">
-                <Fade left duration={duration}>
+                <Fade left duration={dur}>
                 <div className="offer__list_column">
                     <div className="offer__list_element">
                         <img className="element_icon" src={elementaryIcon} alt="elementary icon"></img>
@@ -33,7 +33,7 @@ const Offer = ({scrSize}) => {
                     </div>
                 </div>
                 </Fade>
-                <Fade right duration={duration}>
+                <Fade right duration={dur}>
                 <div className="offer__list_column">
                     <div  className="offer__list_element">
                         <img className="element_icon" src={finalsIcon} alt="finals icon"></img>

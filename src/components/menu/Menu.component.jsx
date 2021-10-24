@@ -34,7 +34,7 @@ const Menu = () => {
                     Przygotowanie do Konkursów
                 </Link>
                 <Link className="txt_white menu__item" activeClass="active" to="current_material" spy={true} smooth={true} duration={1000}>
-                    Bierzący Materiał
+                    Bieżący Materiał
                 </Link>
                 <Link className="txt_white menu__item" activeClass="active" to="contact" spy={true} smooth={true} duration={1000}>
                     Kontakt
