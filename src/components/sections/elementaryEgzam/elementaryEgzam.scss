@@ -24,7 +24,17 @@
     }
     &__image_owl {
         width: 20rem;
-    } 
+    }
+    &__square_root_l {
+        display: none;
+        @media only screen and (min-width: $size-large) {
+            display: block;
+            @include background_image;
+            top: 15%;
+            left: 35%;
+            width: 6rem;
+        }        
+    }
 }
 
 .blob_position-elementary {
