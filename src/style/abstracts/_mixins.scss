@@ -19,6 +19,20 @@
     position: relative;
 }
 
+@mixin sections_content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto 2rem auto;
+    max-width: 60rem;
+}
+
+@mixin sections_text {
+    width: 50%;
+    max-width: 30rem;
+}
+
 @mixin background_image {
     position: absolute;
     z-index: -1;

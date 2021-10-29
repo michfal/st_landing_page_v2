@@ -1,5 +1,4 @@
 export const SetFadeDuration = (size) => {
-    console.log(size)
     const duration = {
         'large': 1000,
         'medium': 1000,

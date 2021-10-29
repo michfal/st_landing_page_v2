@@ -2,7 +2,9 @@
 
 .learning_plan {
     margin: auto;
-    width: 75vw;
+    // width: 75vw;
+    z-index: 1;
+    // border: 1px solid red;
     &__header {
         height: 1.5rem;
         width: 70%;
@@ -14,6 +16,7 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        // cursor: pointer;
         pointer-events: none;
     }
     &__scroll_icon {
@@ -41,6 +44,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    pointer-events: none;
     @media only screen and (min-width: $size-medium) {
         width: 90%;
         flex-direction: row;
