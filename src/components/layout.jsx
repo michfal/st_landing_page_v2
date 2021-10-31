@@ -1,6 +1,5 @@
 
 import React, {useState, useEffect} from 'react'
-import Fade from 'react-reveal/Fade';
 
 import Hero from './sections/hero/Hero.component'
 import Offer from './sections/offer/Offer.component'
@@ -12,32 +11,38 @@ import CurrentMaterial from './sections/currentMaterial/CurrentMaterial.componen
 import Contact from './sections/contact/Contact.components'
 import Navbar from './navbar/Navbar.component'
 import Footer from './sections/footer/Footer.component'
+import GetScreenSize from './logic/getScreenSize/GetScreenSize'
 
 import {thematicScope, sectionTexts} from '../mock/data'
 
 import '../style/main.scss'
 
-const Layout = () => {
 
+
+const Layout = () => {
+  
   const [scopeData, setScope] = useState({})
   const [texts, setText] = useState({})
+  const [scrSize, setScrSize] = useState('small')
 
   useEffect(() => {
     setScope(thematicScope);
-    setText(sectionTexts)
+    setText(sectionTexts);
+    setScrSize(GetScreenSize())
   }, [])
 
+// console.log(scrSize)
 
   return (
     <>
       <Navbar />
       <Hero />
-      <Offer />
-      <CourseStructure />
-      <ElementaryEgzam info={scopeData.elementaryEgzam} paragraph={texts.elementaryEgzam}/>
-      <Finals info={scopeData.finals} paragraph={texts.finals}/>
-      <Contests paragraph={texts.contest}/>
-      <CurrentMaterial paragraph={texts.currentMaterial}/>
+      <Offer scrSize={scrSize}/>
+      <CourseStructure scrSize={scrSize}/>
+      <ElementaryEgzam scrSize={scrSize} info={scopeData.elementaryEgzam} paragraph={texts.elementaryEgzam}/>
+      <Finals scrSize={scrSize} info={scopeData.finals} paragraph={texts.finals}/>
+      <Contests scrSize={scrSize} paragraph={texts.contest}/>
+      <CurrentMaterial scrSize={scrSize} paragraph={texts.currentMaterial}/>
       <Contact />
       <Footer />
     </>

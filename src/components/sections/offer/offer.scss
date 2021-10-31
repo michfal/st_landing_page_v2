@@ -2,19 +2,24 @@
 @import '../../../style/abstracts/mixins';
 
 .offer {
-    height: 100vh;
-    min-height: 50vh;
-    max-height: 50rem;
+    min-height: 100vh;
     padding-top: 5.5rem;
     position: relative;
     @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
         height: 50vh;
     }
+    @media only screen and (min-width: $size-large) {
+        padding-top: 6rem;
+        min-height: 60vh;
+    }    
     &__header {
         margin: 0rem 1rem 2rem 1rem;
         text-align: center;
         padding-right: 1rem;
         line-height: 1.5rem;
+        @media only screen and (min-width: $size-large) {
+            margin: 0rem 1rem 3rem 1rem;
+        }
     }
     &__header:after {
         content:'';
@@ -23,6 +28,10 @@
         background-color: $secondary-dark;
         border-radius: 2px;
         margin: 0.5rem auto;
+        @media only screen and (min-width: $size-large) {
+            max-width: 50rem;
+            border: 1px solid $secondary-dark;
+        }
     }
     &__list {
         height: 80%;
@@ -36,13 +45,20 @@
         @media only screen and (min-width: $size-small) {
             flex-direction: row;
             align-items: flex-start;
+            @media only screen and (min-width: $size-large) {
+                max-width: 40rem;
+            }
         }
         &_column {
             height: 50%;
             width: 50%;
+            min-height: 10rem;
             min-width: 11rem;
             display: flex;
             flex-direction: column;
+            @media only screen and (min-width: $size-large) {
+                max-width: 40rem;
+            }
         }
         &_element {
             margin: auto;
@@ -63,9 +79,12 @@
         @media only screen and (min-width: $size-medium) {
             display: block;
             @include background_image;
-            top: 60%;
+            bottom: 8%;
             left: 3%;
-        }   
+        }
+        @media only screen and (min-width: $size-large) {
+            left: 5%;
+        }
     }
 
     &__a_square_r {
@@ -73,9 +92,12 @@
         @media only screen and (min-width: $size-medium) {
             display: block;
             @include background_image;
-            top: 80%;
+            bottom: 5%;
             right: 10%;
             width: 3rem;
+        }
+        @media only screen and (min-width: $size-large) {
+            right: 15%;
         }   
     }
 }
@@ -83,4 +105,18 @@
 .element_icon {
     height: 100%;
     margin: 0;
+}
+
+.blob_position-offer_left {
+    display: block;
+    height: 50%;
+    left: 15%;
+    top: 20%;
+}
+
+.blob_position-offer_right {
+    display: block;
+    height: 20%;
+    right: 20%;
+    top: 65%;
 }

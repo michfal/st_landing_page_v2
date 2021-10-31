@@ -1,5 +1,6 @@
 import React from 'react'
-import MobileMenu from '../mobileMenu/MobileMenu.components'
+import Menu from '../menu/Menu.component'
+import { Link } from 'react-scroll'
 
 import './navbar.scss'
 
@@ -8,10 +9,10 @@ import owl_icon from '../../images/icon_owl_home.svg'
 
 const Navbar = () => {
     return (
-        <section className="navbar">
+        <nav className="navbar">
             <img className="navbar__icon" src={owl_icon} alt="owl icon"/>
-            <MobileMenu />
-        </section>
+            <Menu />
+        </nav>
     )
 }
 

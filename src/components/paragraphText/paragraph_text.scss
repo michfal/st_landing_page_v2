@@ -4,4 +4,19 @@
 .paragraph_text {
     margin: 2rem auto;
     @include content_width;
+    text-align: center;
+    @media only screen and (min-width: $size-large) {
+        margin: auto;
+    }
+    &-left {
+        @media only screen and (min-width: $size-large) {
+            text-align: left;
+        }
+    }
+    &-right {
+        @media only screen and (min-width: $size-large) {
+            text-align: right;
+        }
+    }
+    
 }

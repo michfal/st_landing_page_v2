@@ -9,7 +9,7 @@ import downArrowIcon from '../../../images/arrow.svg'
 
 const Hero = () => {
     return(
-        <section className="hero">
+        <section id="hero" className="hero">
             <StaticImage 
                 className="hero__logo" 
                 src="../../../images/st_logo.svg" 
