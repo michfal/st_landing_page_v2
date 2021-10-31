@@ -17,9 +17,9 @@ const setColor = (i) => {
 
 
 const planOpen = (e) => {
-    const content = e.target.childNodes[1]
-    const arrow = e.target.childNodes[0].childNodes[0]
-    console.log(e.target.childNodes)
+    const content = e.target.parentNode.childNodes[1]
+    const arrow = e.target.childNodes[0]
+
     content.classList.toggle("learning_plan_display") 
     arrow.classList.toggle("lp_arrow_rotate") 
 }
@@ -49,18 +49,12 @@ function LearningPlan(props) {
 
     return (
         <>  
-            <div role={"button"} tabIndex={0} className="learning_plan" onClick={planOpen}>
-                <div className={`learning_plan__header ${bgColor}`} >
+            <div className="learning_plan" >
+                <button onClick={planOpen} tabIndex={0} className={`learning_plan__header ${bgColor} txt_white txt_white--learning_plan`}>
                     <img className="learning_plan__scroll_icon" src={downArrowIcon} alt="down arrow icon"  />
-                    <h1 className="txt_white txt_white--learning_plan">Przykładowy Program</h1>
-                </div>
-                {/* <div className={`learning_plan__header ${bgColor}`} >
-                    
-                    <button className="txt_white txt_white--learning_plan">
-                    <img className="learning_plan__scroll_icon" src={downArrowIcon} alt="down arrow icon"  />
-                        Przykładowy Program</button>
-                </div> */}
-
+                    Przykładowy Program
+                </button>
+                
                 {list ? planItem(info, border) : null}
             </div>
 
