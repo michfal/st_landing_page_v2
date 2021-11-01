@@ -4,4 +4,15 @@
 
 .current_material {
     @include sections_layout;
+    &__content {
+        @media only screen and (min-width: $size-large) {
+            @include sections_content
+        }
+    }
+    &__text {
+        @media only screen and (min-width: $size-large) {
+            @include sections_text;
+            height: 50vh;
+        }
+    }
 }
