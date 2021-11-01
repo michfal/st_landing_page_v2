@@ -1,6 +1,7 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
 import { StaticImage } from "gatsby-plugin-image"
+
 import {SetFadeDuration} from '../../logic/setFadeDuration/SetFadeDuration'
 
 import LearningPlan from '../../learningPlan/LearningPlan.component'
@@ -26,13 +27,13 @@ const Finals = (props) => {
                 </div>
                 {(scrSize === 'large') ? 
                     <Fade right duration={dur}>
-                    <StaticImage 
-                    className="elementary_egzam__image_owl" 
-                    src="../../../images/owls_board.svg"
-                    alt=""
-                    placeholder="none"
-                    quality="100"
-                    />
+                        <StaticImage 
+                            className="image_owl" 
+                            src="../../../images/owls_board.svg"
+                            alt=""
+                            placeholder="none"
+                            quality="100"
+                        />
                     </Fade>
                 : null}
             </div>
@@ -43,8 +44,8 @@ const Finals = (props) => {
                 placeholder="none"
                 quality="100"
             />
-            <LearningPlan info={info} bgColor="background-green"/>
             {(scrSize === 'medium' || scrSize === 'large') ? <Blob position={"blob_position-finals"} color={"blob_fill-light_green"}/>: null}
+            <LearningPlan info={info} bgColor="background-green"/>
         </section>
     )
 }

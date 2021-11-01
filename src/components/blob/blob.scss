@@ -1,6 +1,7 @@
 @import '../../style/abstracts/mixins';
 
 .blob {
+    display: block;
     @include background_image;
 }
 

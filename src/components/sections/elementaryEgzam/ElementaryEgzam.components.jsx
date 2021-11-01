@@ -19,16 +19,16 @@ const ElementaryEgzam = (props) => {
             <div className="elementary_egzam__content">
                 {(scrSize === 'large') ? 
                     <Fade left duration={dur} wait={1000}>
-                    <StaticImage 
-                    className="elementary_egzam__image_owl" 
-                    src="../../../images/owls_think.svg"
-                    alt=""
-                    placeholder="none"
-                    quality="100"
-                    />
+                        <StaticImage 
+                            className="image_owl" 
+                            src="../../../images/owls_think.svg"
+                            alt=""
+                            placeholder="none"
+                            quality="100"
+                        />
                     </Fade>
                 : null}
-                <Fade duration={dur} right>
+                <Fade right duration={dur}>
                     <div className="elementary_egzam__text">
                         <OvalHeader headerText="Egzamin 8-klasisty" bgColor="background-blue"/>
                         <ParagraphText align={"paragraph_text-right"} paragraph={paragraph}/>

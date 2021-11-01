@@ -4,7 +4,6 @@
 
 .finals {
     @include sections_layout;
-    // position: relative;
     &__content {
         @media only screen and (min-width: $size-large) {
             @include sections_content
@@ -28,13 +27,7 @@
 }
 
 .blob_position-finals {
-    display: block;
-    width: 40%;
-    left: 30%;
+    left: 10%;
     top: 5rem;
-    @media only screen and (min-width: $size-large) {
-        left: 10%;
-        top: 5rem;
-        width: 30%;
-    }
+    width: 30%;
 }
