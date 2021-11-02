@@ -43,7 +43,7 @@ const Layout = () => {
       <Finals scrSize={scrSize} info={scopeData.finals} paragraph={texts.finals}/>
       <Contests scrSize={scrSize} paragraph={texts.contest}/>
       <CurrentMaterial scrSize={scrSize} paragraph={texts.currentMaterial}/>
-      <Contact />
+      <Contact scrSize={scrSize}/>
       <Footer />
     </>
   )

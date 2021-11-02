@@ -30,8 +30,10 @@ const Contests = (props) => {
                     </Fade>
                 : null}
                 <div className="contest__text">
-                    <OvalHeader headerText="Przygotowanie do konkursów" bgColor="background-orange"/>
-                    <ParagraphText align={"paragraph_text-right"} paragraph={paragraph}/>
+                    <Fade right duration={dur}>
+                        <OvalHeader headerText="Przygotowanie do konkursów" bgColor="background-orange"/>
+                        <ParagraphText align={"paragraph_text-right"} paragraph={paragraph}/>
+                    </Fade>
                 </div>
             </div>
             <StaticImage 

@@ -15,4 +15,20 @@
             height: 50vh;
         }
     }
+    &__square_root_l {
+        display: none;
+        @media only screen and (min-width: $size-large) {
+            display: block;
+            @include background_image;
+            top: 1rem;
+            right: 30%;
+            width: 9rem;
+        }  
+    }
+}
+
+.blob_position-current_material {
+    left: 10%;
+    top: 2rem;
+    width: 30%;
 }
