@@ -14,9 +14,10 @@
         padding: 0 2rem;
       }
     &__icon {
-        height: 70%;
+        height: 100%;
+        padding: 3px;
         margin: 0;
-        pointer-events: none;
+        cursor: pointer;
     }
     &__button {
         background-color: transparent;

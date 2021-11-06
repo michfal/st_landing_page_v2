@@ -10,7 +10,9 @@ import owl_icon from '../../images/icon_owl_home.svg'
 const Navbar = () => {
     return (
         <nav className="navbar">
-            <img className="navbar__icon" src={owl_icon} alt="owl icon"/>
+            <Link className="navbar__icon" activeClass="active" to="hero" spy={true} smooth={true} duration={1000}>
+                <img className="navbar__icon" src={owl_icon} alt="owl icon"/>
+            </Link>
             <Menu />
         </nav>
     )

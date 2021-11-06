@@ -15,6 +15,10 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
+        transition: transform 0.5s;
+        &:hover {
+            transform: scale(1.05)
+        }
     }
     &__scroll_icon {
         width: 1.2rem;
@@ -22,6 +26,7 @@
         transition: transform 0.3s;
         pointer-events: none;
     }
+
 }
 
 .lp_content {
