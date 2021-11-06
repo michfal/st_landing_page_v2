@@ -4,4 +4,46 @@
 
 .contest {
     @include sections_layout;
+    &__content {
+        @media only screen and (min-width: $size-large) {
+            @include sections_content
+        }
+    }
+    &__text {
+        @media only screen and (min-width: $size-large) {
+            @include sections_text
+        }
+    }
+    &__square_root_l {
+        display: none;
+        @media only screen and (min-width: $size-large) {
+            display: block;
+            @include background_image;
+            top: 1rem;
+            left: 40%;
+            width: 9rem;
+        }  
+    }
+    &__a_square {
+        display: none;
+        @media only screen and (min-width: $size-large) {
+            display: block;
+            @include background_image;
+            top: 1rem;
+            left: 10%;
+            width: 3rem;
+        }  
+    }
+}
+
+.blob_position-contest1 {
+    right: 10%;
+    top: 5rem;
+    width: 30%;
+}
+
+.blob_position-contest2 {
+    left: 30%;
+    top: 5rem;
+    width: 15%;
 }

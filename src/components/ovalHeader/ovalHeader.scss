@@ -20,7 +20,15 @@
         width: 90%;
         min-width: 20rem;
     }
+    &-narrow {
+        width: 30%;
+        min-width: 10rem;
+        @media only screen and (min-width: $size-large) {
+            max-width: 13rem;
+        }
+    }
 }
+
 
 .background-green {
     background-color: $green;

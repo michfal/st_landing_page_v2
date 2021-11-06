@@ -1,5 +1,10 @@
 @import '../../../style/abstracts/variables';
 
+@keyframes scroll_hover {
+  0%   {transform: translate(0%, 0%);}
+  100% {transform: translate(0%, 40%);}
+}
+
 .hero {
     height: 100vh;
     // background-image: url("../../../images/main_bg.svg");
@@ -15,7 +20,7 @@
     &__logo {
       width: 35vw;
       min-width: 16rem;
-      max-width: 30rem;
+      max-width: 25rem;
       margin-top: 40vh;
       @media only screen and (min-width: $size-medium) {
         width: 50vw;
@@ -26,6 +31,13 @@
       width: 3.5rem;
       margin-bottom: 4.5rem;
       cursor: pointer;
+      &:hover {
+        animation-name: scroll_hover;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+      }
     }
     &__background {
       height: 100vh;
@@ -34,3 +46,4 @@
     }
   }
 
+ 

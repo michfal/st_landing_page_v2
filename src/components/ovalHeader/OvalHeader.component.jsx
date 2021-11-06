@@ -5,9 +5,12 @@ import './ovalHeader.scss'
 
 
 const OvalHeader = (props) => {
+
+    const {headerText, bgColor, width} = props
+    
     return (
-        <h4 className={`oval_header txt_white ${props.bgColor}`} >
-            {props.headerText}
+        <h4 className={`oval_header txt_white ${bgColor} ${width ? width : ""}`} >
+            {headerText}
         </h4>  
     )
 }

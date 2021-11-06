@@ -4,7 +4,9 @@
 
 .contact {
     @include sections_layout;
-    // height: 50vh;
+    @media only screen and (min-width: $size-large) {
+        height: 80vh;
+    }
     &__info {
         background-color: $gray-light;
         width: 75%;
@@ -18,8 +20,6 @@
         align-items: center;
         justify-content:space-evenly;
         &_element {
-            // border: 1px solid red;
-            // width: 10rem;
             height: 2.5rem;
             display: flex;
             align-items: center;
@@ -40,5 +40,31 @@
                 margin-top: -0.5rem;;
             }
         }
+    }
+    &__content {
+        @media only screen and (min-width: $size-large) {
+            @include sections_content;
+            margin-top: 2rem;
+        }
+    }
+    &__square_root {
+        display: none;
+        @media only screen and (min-width: $size-large) {
+            display: block;
+            @include background_image;
+            top: 5rem;
+            right: 15%;
+            width: 7rem;
+        }  
+    }
+    &__a_square {
+        display: none;
+        @media only screen and (min-width: $size-large) {
+            display: block;
+            @include background_image;
+            top: 4rem;
+            left: 15%;
+            width: 5rem;
+        }  
     }
 }
