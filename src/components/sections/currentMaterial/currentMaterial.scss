@@ -4,6 +4,9 @@
 
 .current_material {
     @include sections_layout;
+    @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
+        height: 50vh;
+    }  
     &__content {
         @media only screen and (min-width: $size-large) {
             @include sections_content
