@@ -7,6 +7,9 @@
     @media only screen and (min-width: $size-large) {
         height: 80vh;
     }
+    @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
+        height: 40vh;
+    }  
     &__info {
         background-color: $gray-light;
         width: 75%;
