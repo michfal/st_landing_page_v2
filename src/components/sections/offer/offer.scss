@@ -2,16 +2,18 @@
 @import '../../../style/abstracts/mixins';
 
 .offer {
+    // border: 1px solid red;
     min-height: 100vh;
     padding-top: 5.5rem;
     position: relative;
-    @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
-        height: 50vh;
-    }
+
     @media only screen and (min-width: $size-large) {
         padding-top: 6rem;
         min-height: 60vh;
-    }    
+    }  
+    @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
+        min-height: 30vh;
+    }  
     &__header {
         margin: 0rem 1rem 2rem 1rem;
         text-align: center;

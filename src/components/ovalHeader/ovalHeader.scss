@@ -15,6 +15,8 @@
     margin: auto;
     @media only screen and (min-width: $size-medium) {
         padding: 1.8rem 4rem 0.5rem 4rem;
+        min-width: 20rem;
+        max-width: 25rem;
     }
     @media only screen and (min-width: $size-large) {
         width: 90%;
