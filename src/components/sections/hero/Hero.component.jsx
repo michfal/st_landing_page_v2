@@ -31,14 +31,14 @@ const Hero = () => {
           alt="down arrow icon"
         />
       </Link>
-      <StaticImage
+      {/* <StaticImage
         className="hero__background"
         src="../../../images/main_bg.svg"
         alt="st logo"
         placeholder="none"
         // fit= "cover"
         quality="100"
-      />
+      /> */}
     </section>
   )
 }

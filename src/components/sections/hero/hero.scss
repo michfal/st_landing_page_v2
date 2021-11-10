@@ -7,7 +7,7 @@
 
 .hero {
     height: 100vh;
-    // background-image: url("../../../images/main_bg.svg");
+    background-image: url("../../../images/main_bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -39,11 +39,11 @@
         animation-timing-function: ease-in-out;
       }
     }
-    &__background {
-      height: 100vh;
-      position: absolute;
-      z-index: -1;
-    }
+    // &__background {
+    //   height: 100vh;
+    //   position: absolute;
+    //   z-index: -1;
+    // }
   }
 
  
