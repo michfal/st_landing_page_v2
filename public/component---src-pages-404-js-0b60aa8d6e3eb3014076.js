@@ -1,0 +1,2 @@
+(self.webpackChunkst_landing_page=self.webpackChunkst_landing_page||[]).push([[883],{9616:function(e,t,n){"use strict";n.r(t);var u=n(7294),a=n(9739);t.default=function(){return u.createElement(a.Z,null,u.createElement("h1",null,"404: Not Found"),u.createElement("p",null,"You just hit a route that doesn't exist... the sadness."))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-0b60aa8d6e3eb3014076.js.map
