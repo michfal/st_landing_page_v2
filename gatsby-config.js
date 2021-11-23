@@ -3,7 +3,7 @@ module.exports = {
     title: `ST landing page`,
     description: `Landing page for private math coaching school`,
     author: `@michalfal`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://szkolatalentow.com.pl/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
