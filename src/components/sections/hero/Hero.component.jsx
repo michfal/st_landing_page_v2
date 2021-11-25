@@ -1,5 +1,4 @@
 import React from "react"
-// import Fade from 'react-reveal/Fade'
 import { Link } from "react-scroll"
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -17,7 +16,7 @@ const Hero = () => {
         placeholder="none"
         quality="100"
       />
-      {/* <img className="hero__logo" src={logo} alt="st logo" /> */}
+
       <Link
         activeClass="active"
         to="offer"
@@ -31,14 +30,7 @@ const Hero = () => {
           alt="down arrow icon"
         />
       </Link>
-      {/* <StaticImage
-        className="hero__background"
-        src="../../../images/main_bg.svg"
-        alt="st logo"
-        placeholder="none"
-        // fit= "cover"
-        quality="100"
-      /> */}
+
     </section>
   )
 }

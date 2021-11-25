@@ -1,4 +1,4 @@
-export const SetFadeDuration = size => {
+export const setFadeDuration = size => {
   const duration = {
     large: 1000,
     medium: 1000,

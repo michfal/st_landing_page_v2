@@ -1,32 +1,16 @@
 import React from "react"
 import nextId from "react-id-generator"
 import downArrowIcon from "../../images/arrow.svg"
+import { setColor, planOpen } from "../logic/learningPlanLogic"
+
 
 import "./learningPlan.scss"
 
-const setColor = i => {
-  const number = i + 1
-  if (number % 3 === 0) {
-    return "point_green"
-  }
-  if ((number + 1) % 3 === 0) {
-    return "point_violet"
-  }
-}
-
-const planOpen = e => {
-  const content = e.target.parentNode.childNodes[1]
-  const arrow = e.target.childNodes[0]
-
-  content.classList.toggle("learning_plan_display")
-  arrow.classList.toggle("lp_arrow_rotate")
-}
 
 const planItem = (info, border) => {
   return (
     <div className={`lp_content ${border}`}>
       {info.map((e, i) => {
-        setColor(i)
         return (
           <div key={nextId()} className="lp_content__item">
             <div className={`lp_content__item_point ${setColor(i)}`}>
@@ -42,7 +26,7 @@ const planItem = (info, border) => {
   )
 }
 
-function LearningPlan(props) {
+const LearningPlan = (props) => {
   const { info, bgColor, border } = props
   const list = info !== undefined
 
