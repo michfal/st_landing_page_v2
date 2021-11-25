@@ -2,7 +2,7 @@ import React from "react"
 import Fade from "react-reveal/Fade"
 import { StaticImage } from "gatsby-plugin-image"
 
-import { SetFadeDuration } from "../../logic/setFadeDuration/SetFadeDuration"
+import { setFadeDuration } from "../../logic/setFadeDuration"
 
 import OvalHeader from "../../ovalHeader/OvalHeader.component"
 import ParagraphText from "../../paragraphText/ParagraphText.component"
@@ -12,7 +12,7 @@ import "./contest.scss"
 
 const Contests = props => {
   const { paragraph, scrSize } = props
-  const dur = SetFadeDuration(scrSize)
+  const dur = setFadeDuration(scrSize)
   return (
     <section id="contest" className="contest">
       <div className="contest__content">

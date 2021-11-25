@@ -10,7 +10,7 @@ import CurrentMaterial from "./sections/currentMaterial/CurrentMaterial.componen
 import Contact from "./sections/contact/Contact.components"
 import Navbar from "./navbar/Navbar.component"
 import Footer from "./sections/footer/Footer.component"
-import GetScreenSize from "./logic/getScreenSize/GetScreenSize"
+import { getScreenSize } from "./logic/getScreenSize"
 
 import { thematicScope, sectionTexts } from "../mock/data"
 
@@ -24,10 +24,9 @@ const Layout = () => {
   useEffect(() => {
     setScope(thematicScope)
     setText(sectionTexts)
-    setScrSize(GetScreenSize())
+    setScrSize(getScreenSize())
   }, [])
 
-  // console.log(scrSize)
 
   return (
     <>

@@ -4,12 +4,12 @@ import Fade from "react-reveal/Fade"
 import Blob from "../../blob/Blob.component"
 
 import OvalHeader from "../../ovalHeader/OvalHeader.component"
-import { SetFadeDuration } from "../../logic/setFadeDuration/SetFadeDuration"
+import { setFadeDuration } from "../../logic/setFadeDuration"
 
 import "./courseStructure.scss"
 
 const CourseStructure = ({ scrSize }) => {
-  const dur = SetFadeDuration(scrSize)
+  const dur = setFadeDuration(scrSize)
   return (
     <section id="structure" className="structure">
       <Fade top duration={dur}>

@@ -2,7 +2,7 @@ import React from "react"
 import Fade from "react-reveal/Fade"
 import { StaticImage } from "gatsby-plugin-image"
 
-import { SetFadeDuration } from "../../logic/setFadeDuration/SetFadeDuration"
+import { setFadeDuration } from "../../logic/setFadeDuration"
 
 import OvalHeader from "../../ovalHeader/OvalHeader.component"
 import atIcon from "../../../images/icon_at.svg"
@@ -11,7 +11,7 @@ import phoneIcon from "../../../images/icon_phone.svg"
 import "./contact.scss"
 
 const Contact = ({ scrSize }) => {
-  const dur = SetFadeDuration(scrSize)
+  const dur = setFadeDuration(scrSize)
   return (
     <section id="contact" className="contact">
       <OvalHeader

@@ -8,12 +8,12 @@ import contestIcon from "../../../images/icon_contest.svg"
 import finalsIcon from "../../../images/icon_finals.svg"
 import currentIcon from "../../../images/icon_current.svg"
 import Blob from "../../blob/Blob.component"
-import { SetFadeDuration } from "../../logic/setFadeDuration/SetFadeDuration"
+import { setFadeDuration } from "../../logic/setFadeDuration"
 
 import "./offer.scss"
 
 const Offer = ({ scrSize }) => {
-  const dur = SetFadeDuration(scrSize)
+  const dur = setFadeDuration(scrSize)
   return (
     <section id="offer" className="offer">
       <Fade top duration={dur}>

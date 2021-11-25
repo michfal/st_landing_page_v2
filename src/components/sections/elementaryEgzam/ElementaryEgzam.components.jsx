@@ -6,13 +6,13 @@ import LearningPlan from "../../learningPlan/LearningPlan.component"
 import OvalHeader from "../../ovalHeader/OvalHeader.component"
 import ParagraphText from "../../paragraphText/ParagraphText.component"
 import Blob from "../../blob/Blob.component"
-import { SetFadeDuration } from "../../logic/setFadeDuration/SetFadeDuration"
+import { setFadeDuration } from "../../logic/setFadeDuration"
 
 import "./elementaryEgzam.scss"
 
 const ElementaryEgzam = props => {
   const { info, paragraph, scrSize } = props
-  const dur = SetFadeDuration(scrSize)
+  const dur = setFadeDuration(scrSize)
   return (
     <section id="elementary_egzam" className="elementary_egzam">
       <div className="elementary_egzam__content">
