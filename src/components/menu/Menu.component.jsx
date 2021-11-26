@@ -13,9 +13,9 @@ const btnClick = e => {
 const Menu = () => {
   return (
     <>
-      <button className="navbar__button" onClick={btnClick}>
+      <button className="menu_button" onClick={btnClick}>
         <img
-          className="navbar__button_icon"
+          className="menu_button__icon"
           src={hamburgerIcon}
           alt="menu icon"
         />
