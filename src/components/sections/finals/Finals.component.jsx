@@ -11,8 +11,7 @@ import Blob from "../../blob/Blob.component"
 
 import "./finals.scss"
 
-const Finals = props => {
-  const { info, paragraph, scrSize } = props
+const Finals = ({ info, paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="finals" className="finals">
@@ -29,7 +28,7 @@ const Finals = props => {
             />
           </Fade>
         </div>
-        {scrSize === "large" ? (
+        {scrSize === "large" &&
           <Fade right duration={dur}>
             <StaticImage
               className="image_owl"
@@ -39,7 +38,7 @@ const Finals = props => {
               quality="100"
             />
           </Fade>
-        ) : null}
+        }
       </div>
       <StaticImage
         className="finals__square_root_l"
@@ -48,12 +47,12 @@ const Finals = props => {
         placeholder="none"
         quality="100"
       />
-      {scrSize === "medium" || scrSize === "large" ? (
+      {(scrSize === "medium" || scrSize === "large") &&
         <Blob
           position={"blob_position-finals"}
           color={"blob_fill-light_green"}
         />
-      ) : null}
+      }
       <LearningPlan info={info} bgColor="background-green" />
     </section>
   )

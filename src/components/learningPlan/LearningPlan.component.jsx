@@ -26,8 +26,7 @@ const planItem = (info, border) => {
   )
 }
 
-const LearningPlan = (props) => {
-  const { info, bgColor, border } = props
+const LearningPlan = ({ info, bgColor, border }) => {
   const list = info !== undefined
 
   return (
@@ -46,7 +45,7 @@ const LearningPlan = (props) => {
           Przykładowy Program
         </button>
 
-        {list ? planItem(info, border) : null}
+        {list && planItem(info, border)}
       </div>
     </>
   )

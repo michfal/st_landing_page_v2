@@ -44,7 +44,7 @@ const Contact = ({ scrSize }) => {
             </div>
           </div>
         </Fade>
-        {scrSize === "large" ? (
+        {scrSize === "large" &&
           <Fade right duration={dur}>
             <StaticImage
               className="image_owl-contact"
@@ -54,7 +54,7 @@ const Contact = ({ scrSize }) => {
               quality="100"
             />
           </Fade>
-        ) : null}
+        }
       </div>
       <StaticImage
         className="contact__a_square"

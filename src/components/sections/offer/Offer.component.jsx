@@ -72,18 +72,18 @@ const Offer = ({ scrSize }) => {
           </div>
         </Fade>
       </div>
-      {scrSize === "large" ? (
+      {scrSize === "large" && 
         <Blob
           position={"blob_position-offer_left"}
           color={"blob_fill-violet"}
         />
-      ) : null}
-      {scrSize === "large" ? (
+      }
+      {scrSize === "large" && 
         <Blob
           position={"blob_position-offer_right"}
           color={"blob_fill-violet"}
         />
-      ) : null}
+      }
 
       <StaticImage
         className="offer__a_square_l"

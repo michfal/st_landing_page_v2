@@ -2,8 +2,7 @@ import React from "react"
 
 import "./blob.scss"
 
-const Blob = props => {
-  const { color, position } = props
+const Blob = ({ color, position }) => {
 
   return (
     <svg

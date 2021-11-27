@@ -10,13 +10,12 @@ import { setFadeDuration } from "../../logic/setFadeDuration"
 
 import "./elementaryEgzam.scss"
 
-const ElementaryEgzam = props => {
-  const { info, paragraph, scrSize } = props
+const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="elementary_egzam" className="elementary_egzam">
       <div className="elementary_egzam__content">
-        {scrSize === "large" ? (
+        {scrSize === "large" &&
           <Fade left duration={dur} wait={1000}>
             <StaticImage
               className="image_owl"
@@ -26,7 +25,7 @@ const ElementaryEgzam = props => {
               quality="100"
             />
           </Fade>
-        ) : null}
+        }
         <Fade right duration={dur}>
           <div className="elementary_egzam__text">
             <OvalHeader
@@ -47,12 +46,12 @@ const ElementaryEgzam = props => {
         placeholder="none"
         quality="100"
       />
-      {scrSize === "large" ? (
+      {scrSize === "large" &&
         <Blob
           position={"blob_position-elementary"}
           color={"blob_fill-light_green"}
         />
-      ) : null}
+      }
       <LearningPlan
         info={info}
         bgColor="background-blue"

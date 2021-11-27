@@ -10,13 +10,12 @@ import Blob from "../../blob/Blob.component"
 
 import "./contest.scss"
 
-const Contests = props => {
-  const { paragraph, scrSize } = props
+const Contests = ({ paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="contest" className="contest">
       <div className="contest__content">
-        {scrSize === "large" ? (
+        {scrSize === "large" &&
           <Fade left duration={dur}>
             <StaticImage
               className="image_owl"
@@ -26,7 +25,7 @@ const Contests = props => {
               quality="100"
             />
           </Fade>
-        ) : null}
+        }
         <div className="contest__text">
           <Fade right duration={dur}>
             <OvalHeader
@@ -54,18 +53,18 @@ const Contests = props => {
         placeholder="none"
         quality="100"
       />
-      {scrSize === "medium" || scrSize === "large" ? (
+      {(scrSize === "medium" || scrSize === "large") &&
         <Blob
           position={"blob_position-contest1"}
           color={"blob_fill-light_green"}
         />
-      ) : null}
-      {scrSize === "medium" || scrSize === "large" ? (
+      }
+      {(scrSize === "medium" || scrSize === "large") &&
         <Blob
           position={"blob_position-contest2"}
           color={"blob_fill-light_green"}
         />
-      ) : null}
+      }
     </section>
   )
 }

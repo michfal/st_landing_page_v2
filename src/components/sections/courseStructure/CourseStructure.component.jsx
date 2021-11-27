@@ -50,18 +50,18 @@ const CourseStructure = ({ scrSize }) => {
         quality="100"
       />
 
-      {scrSize === "large" ? (
+      {scrSize === "large" &&
         <Blob
           position={"blob_position-structure_left"}
           color={"blob_fill-violet"}
         />
-      ) : null}
-      {scrSize === "large" ? (
+      }
+      {scrSize === "large" &&
         <Blob
           position={"blob_position-structure_right"}
           color={"blob_fill-violet"}
         />
-      ) : null}
+      }
 
       <Fade left duration={dur} cascade>
         <ul className="structure__list">

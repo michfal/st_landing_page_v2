@@ -10,8 +10,7 @@ import Blob from "../../blob/Blob.component"
 
 import "./currentMaterial.scss"
 
-const CurrentMaterial = props => {
-  const { paragraph, scrSize } = props
+const CurrentMaterial = ({ paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="current_material" className="current_material">
@@ -28,7 +27,7 @@ const CurrentMaterial = props => {
             />
           </Fade>
         </div>
-        {scrSize === "large" ? (
+        {scrSize === "large" &&
           <Fade right duration={dur}>
             <StaticImage
               className="image_owl-checklist"
@@ -38,7 +37,7 @@ const CurrentMaterial = props => {
               quality="100"
             />
           </Fade>
-        ) : null}
+        }
       </div>
       <StaticImage
         className="current_material__square_root_l"
@@ -47,12 +46,12 @@ const CurrentMaterial = props => {
         placeholder="none"
         quality="100"
       />
-      {scrSize === "medium" || scrSize === "large" ? (
+      {(scrSize === "medium" || scrSize === "large") &&
         <Blob
           position={"blob_position-current_material"}
           color={"blob_fill-light_green"}
         />
-      ) : null}
+      }
     </section>
   )
 }
