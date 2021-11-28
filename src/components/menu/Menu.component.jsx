@@ -10,7 +10,7 @@ const btnClick = e => {
   element.classList.toggle("menu_display")
 }
 
-const Menu = () => {
+export const Menu = () => {
   return (
     <>
       <button className="menu_button" onClick={btnClick}>
@@ -95,5 +95,3 @@ const Menu = () => {
     </>
   )
 }
-
-export default Menu

@@ -2,7 +2,7 @@ import React from "react"
 
 import "./paragraph_text.scss"
 
-const ParagraphText = ({ align, paragraph }) => {
+export const ParagraphText = ({ align, paragraph }) => {
   const content = paragraph !== undefined
 
   return (
@@ -15,5 +15,3 @@ const ParagraphText = ({ align, paragraph }) => {
     </>
   )
 }
-
-export default ParagraphText

@@ -4,13 +4,13 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
-import OvalHeader from "../../ovalHeader/OvalHeader.component"
-import ParagraphText from "../../paragraphText/ParagraphText.component"
-import Blob from "../../blob/Blob.component"
+import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
+import { ParagraphText } from "../../paragraphText/ParagraphText.component"
+import { Blob } from "../../blob/Blob.component"
 
 import "./contest.scss"
 
-const Contests = ({ paragraph, scrSize }) => {
+export const Contests = ({ paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="contest" className="contest">
@@ -68,5 +68,3 @@ const Contests = ({ paragraph, scrSize }) => {
     </section>
   )
 }
-
-export default Contests

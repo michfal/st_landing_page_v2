@@ -26,7 +26,7 @@ const planItem = (info, border) => {
   )
 }
 
-const LearningPlan = ({ info, bgColor, border }) => {
+export const LearningPlan = ({ info, bgColor, border }) => {
   const list = info !== undefined
 
   return (
@@ -50,5 +50,3 @@ const LearningPlan = ({ info, bgColor, border }) => {
     </>
   )
 }
-
-export default LearningPlan

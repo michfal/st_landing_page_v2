@@ -2,7 +2,7 @@ import React from "react"
 
 import "./blob.scss"
 
-const Blob = ({ color, position }) => {
+export const Blob = ({ color, position }) => {
 
   return (
     <svg
@@ -27,5 +27,3 @@ const Blob = ({ color, position }) => {
     </svg>
   )
 }
-
-export default Blob

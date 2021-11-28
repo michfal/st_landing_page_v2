@@ -2,15 +2,15 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 
-import LearningPlan from "../../learningPlan/LearningPlan.component"
-import OvalHeader from "../../ovalHeader/OvalHeader.component"
-import ParagraphText from "../../paragraphText/ParagraphText.component"
-import Blob from "../../blob/Blob.component"
+import { LearningPlan } from "../../learningPlan/LearningPlan.component"
+import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
+import { ParagraphText } from "../../paragraphText/ParagraphText.component"
+import { Blob } from "../../blob/Blob.component"
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
 import "./elementaryEgzam.scss"
 
-const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
+export const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="elementary_egzam" className="elementary_egzam">
@@ -60,5 +60,3 @@ const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
     </section>
   )
 }
-
-export default ElementaryEgzam

@@ -1,12 +1,12 @@
 import React from "react"
-import Menu from "../menu/Menu.component"
+import { Menu } from "../menu/Menu.component"
 import { Link } from "react-scroll"
 
 import "./navbar.scss"
 
 import owl_icon from "../../images/icon_owl_home.svg"
 
-const Navbar = () => {
+export const Navbar = () => {
   return (
     <nav className="navbar">
       <Link
@@ -23,5 +23,3 @@ const Navbar = () => {
     </nav>
   )
 }
-
-export default Navbar

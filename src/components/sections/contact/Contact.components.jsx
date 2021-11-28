@@ -4,13 +4,13 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
-import OvalHeader from "../../ovalHeader/OvalHeader.component"
+import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
 import atIcon from "../../../images/icon_at.svg"
 import phoneIcon from "../../../images/icon_phone.svg"
 
 import "./contact.scss"
 
-const Contact = ({ scrSize }) => {
+export const Contact = ({ scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="contact" className="contact">
@@ -73,5 +73,3 @@ const Contact = ({ scrSize }) => {
     </section>
   )
 }
-
-export default Contact

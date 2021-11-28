@@ -6,7 +6,7 @@ import "./hero.scss"
 
 import downArrowIcon from "../../../images/arrow.svg"
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <section id="hero" className="hero">
       <StaticImage
@@ -34,5 +34,3 @@ const Hero = () => {
     </section>
   )
 }
-
-export default Hero

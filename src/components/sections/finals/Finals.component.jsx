@@ -4,14 +4,14 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
-import LearningPlan from "../../learningPlan/LearningPlan.component"
-import OvalHeader from "../../ovalHeader/OvalHeader.component"
-import ParagraphText from "../../paragraphText/ParagraphText.component"
-import Blob from "../../blob/Blob.component"
+import { LearningPlan } from "../../learningPlan/LearningPlan.component"
+import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
+import { ParagraphText } from "../../paragraphText/ParagraphText.component"
+import { Blob } from "../../blob/Blob.component"
 
 import "./finals.scss"
 
-const Finals = ({ info, paragraph, scrSize }) => {
+export const Finals = ({ info, paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="finals" className="finals">
@@ -57,5 +57,3 @@ const Finals = ({ info, paragraph, scrSize }) => {
     </section>
   )
 }
-
-export default Finals

@@ -7,12 +7,12 @@ import elementaryIcon from "../../../images/icon_elementary.svg"
 import contestIcon from "../../../images/icon_contest.svg"
 import finalsIcon from "../../../images/icon_finals.svg"
 import currentIcon from "../../../images/icon_current.svg"
-import Blob from "../../blob/Blob.component"
+import { Blob } from "../../blob/Blob.component"
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
 import "./offer.scss"
 
-const Offer = ({ scrSize }) => {
+export const Offer = ({ scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="offer" className="offer">
@@ -102,5 +102,3 @@ const Offer = ({ scrSize }) => {
     </section>
   )
 }
-
-export default Offer

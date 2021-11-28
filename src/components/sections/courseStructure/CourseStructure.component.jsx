@@ -1,14 +1,14 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
-import Blob from "../../blob/Blob.component"
+import { Blob } from "../../blob/Blob.component"
 
-import OvalHeader from "../../ovalHeader/OvalHeader.component"
+import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
 import "./courseStructure.scss"
 
-const CourseStructure = ({ scrSize }) => {
+export const CourseStructure = ({ scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="structure" className="structure">
@@ -81,5 +81,3 @@ const CourseStructure = ({ scrSize }) => {
     </section>
   )
 }
-
-export default CourseStructure

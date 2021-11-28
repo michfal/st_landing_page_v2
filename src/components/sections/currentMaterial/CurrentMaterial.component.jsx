@@ -4,13 +4,13 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
-import OvalHeader from "../../ovalHeader/OvalHeader.component"
-import ParagraphText from "../../paragraphText/ParagraphText.component"
-import Blob from "../../blob/Blob.component"
+import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
+import { ParagraphText } from "../../paragraphText/ParagraphText.component"
+import { Blob } from "../../blob/Blob.component"
 
 import "./currentMaterial.scss"
 
-const CurrentMaterial = ({ paragraph, scrSize }) => {
+export const CurrentMaterial = ({ paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="current_material" className="current_material">
@@ -55,5 +55,3 @@ const CurrentMaterial = ({ paragraph, scrSize }) => {
     </section>
   )
 }
-
-export default CurrentMaterial

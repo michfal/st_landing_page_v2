@@ -5,7 +5,7 @@ import "./footer.scss"
 
 const year = new Date().getFullYear()
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="footer">
       <Link
@@ -24,5 +24,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer
