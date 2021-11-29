@@ -1,7 +1,9 @@
 import React from "react"
 import nextId from "react-id-generator"
 
-import { setColor } from "../logic/learningPlanLogic"
+import { setColor } from "../../logic/learningPlanLogic"
+
+import "./planItems.scss"
 
 export const PlanItems = ({info, border, planOpenState}) => {
     

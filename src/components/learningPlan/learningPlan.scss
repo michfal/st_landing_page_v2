@@ -29,75 +29,75 @@
 
 }
 
-.lp_content {
-    border: 0.3rem solid $green;
-    padding: 0;
-    border-radius: 2rem;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    top: -1rem;
-    z-index: -1;
-    transform-origin: top;
-    height: 0;
-    transform: scale(0);
-    transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    pointer-events: none;
-    @media only screen and (min-width: $size-medium) {
-        width: 90%;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    &--border_blue {
-        border: 0.3rem solid $blue-green;
-    }
-    &__item {
-        margin: 1.5rem auto;
-        width: 90%;;
-        display: flex;
-        align-items: center;
-        @media only screen and (min-width: $size-medium) {
-            width: 45%;
-            margin: 1.5rem auto;
-        }
-        &_point {
-            background-color: $blue-green;
-            width: 2.5rem;
-            height: 2.5rem;
-            margin: auto 10% auto auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 1.5rem;
-        }
-        &_text {
-            width: 70%;
-        }
-    }
-}
+// .lp_content {
+//     border: 0.3rem solid $green;
+//     padding: 0;
+//     border-radius: 2rem;
+//     margin: auto;
+//     overflow: hidden;
+//     position: relative;
+//     top: -1rem;
+//     z-index: -1;
+//     transform-origin: top;
+//     height: 0;
+//     transform: scale(0);
+//     transition: transform 0.3s;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: space-around;
+//     pointer-events: none;
+//     @media only screen and (min-width: $size-medium) {
+//         width: 90%;
+//         flex-direction: row;
+//         flex-wrap: wrap;
+//     }
+//     &--border_blue {
+//         border: 0.3rem solid $blue-green;
+//     }
+//     &__item {
+//         margin: 1.5rem auto;
+//         width: 90%;;
+//         display: flex;
+//         align-items: center;
+//         @media only screen and (min-width: $size-medium) {
+//             width: 45%;
+//             margin: 1.5rem auto;
+//         }
+//         &_point {
+//             background-color: $blue-green;
+//             width: 2.5rem;
+//             height: 2.5rem;
+//             margin: auto 10% auto auto;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             border-radius: 1.5rem;
+//         }
+//         &_text {
+//             width: 70%;
+//         }
+//     }
+// }
 
-.point_green {
-    background-color: $green;
-}
+// .point_green {
+//     background-color: $green;
+// }
 
-.point_blue {
-    background-color: $blue-green;
-}
+// .point_blue {
+//     background-color: $blue-green;
+// }
 
-.point_violet {
-    background-color: $violet;
-}
+// .point_violet {
+//     background-color: $violet;
+// }
 
 
-.learning_plan_display {
-    height: auto;
-    transform: scale(1);
-}
+// .learning_plan_display {
+//     height: auto;
+//     transform: scale(1);
+// }
 
-.lp_arrow_rotate {
-    transform: rotate(180deg)
-}
+// .lp_arrow_rotate {
+//     transform: rotate(180deg)
+// }

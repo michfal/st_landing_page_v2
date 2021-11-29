@@ -1,8 +1,10 @@
 import React from "react"
 import downArrowIcon from "../../images/arrow.svg"
 import { useToggle } from "../logic/useToggle"
-import { PlanItems } from "./PlanItems.component"
+import { PlanItems } from "./planItems/PlanItems.component"
+import nextId from "react-id-generator"
 
+import { setColor } from "../logic/learningPlanLogic"
 
 import "./learningPlan.scss"
 
