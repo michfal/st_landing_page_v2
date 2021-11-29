@@ -1,5 +1,6 @@
 import React from "react"
 import nextId from "react-id-generator"
+import clsx from "clsx"
 
 import { setColor } from "../../logic/learningPlanLogic"
 
@@ -8,7 +9,7 @@ import "./planItems.scss"
 export const PlanItems = ({info, border, planOpenState}) => {
     
     return (
-      <div className={`lp_content ${border} ${planOpenState && "learning_plan_display"}`}>
+      <div className={clsx("lp_content", border, planOpenState && "learning_plan_display")}>
         {info.map((e, i) => {
           return (
             <div key={nextId()} className="lp_content__item">
