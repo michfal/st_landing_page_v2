@@ -10,21 +10,22 @@ import { CurrentMaterial } from "./sections/currentMaterial/CurrentMaterial.comp
 import { Contact } from "./sections/contact/Contact.components"
 import { Navbar } from "./navbar/Navbar.component"
 import { Footer } from "./sections/footer/Footer.component"
-import { getScreenSize } from "./logic/getScreenSize"
+import { useWindowSize } from "./logic/useWindowSize"
 
 import { thematicScope, sectionTexts } from "../mock/data"
 
 import "../style/main.scss"
 
+
 export const Layout = () => {
   const [scopeData, setScope] = useState({})
   const [texts, setText] = useState({})
-  const [scrSize, setScrSize] = useState("small")
+  const scrSize = useWindowSize();
 
   useEffect(() => {
     setScope(thematicScope)
     setText(sectionTexts)
-    setScrSize(getScreenSize())
+
   }, [])
 
 
