@@ -1,7 +1,8 @@
 @import '../../../style/abstracts/variables';
 @import '../../../style/abstracts/mixins';
 
-.elementary_egzam {
+
+.finals {
     @include sections_layout;
     &__content {
         @media only screen and (min-width: $size-large) {
@@ -13,23 +14,20 @@
             @include sections_text
         }
     }
-    &__image_owl {
-        width: 20rem;
-    }
     &__square_root_l {
         display: none;
         @media only screen and (min-width: $size-large) {
             display: block;
             @include background_image;
-            top: 4rem;
-            left: 35%;
-            width: 6rem;
-        }        
+            top: 1rem;
+            left: 50%;
+            width: 8rem;
+        }  
     }
 }
 
-.blob_position-elementary {
-    height: 20rem;
-    right: 5rem;
-    top: 2rem;
-}
+// .blob_position-finals {
+//     left: 10%;
+//     top: 5rem;
+//     width: 30%;
+// }

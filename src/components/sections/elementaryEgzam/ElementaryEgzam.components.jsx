@@ -8,13 +8,13 @@ import { ParagraphText } from "../../paragraphText/ParagraphText.component"
 import { Blob } from "../../blob/Blob.component"
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
-import "./elementaryEgzam.scss"
+import * as styles from "./ElementaryEgzam.module.scss"
 
 export const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
-    <section id="elementary_egzam" className="elementary_egzam">
-      <div className="elementary_egzam__content">
+    <section id="elementary_egzam" className={styles.elementary_egzam}>
+      <div className={styles.elementary_egzam__content}>
         {scrSize === "large" &&
           <Fade left duration={dur} wait={1000}>
             <StaticImage
@@ -27,7 +27,7 @@ export const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
           </Fade>
         }
         <Fade right duration={dur}>
-          <div className="elementary_egzam__text">
+          <div className={styles.elementary_egzam__text}>
             <OvalHeader
               headerText="Egzamin 8-klasisty"
               bgColor="background-blue"
@@ -40,7 +40,7 @@ export const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
         </Fade>
       </div>
       <StaticImage
-        className="elementary_egzam__square_root_l"
+        className={styles.elementary_egzam__square_root_l}
         src="../../../images/square_root2.svg"
         alt=""
         placeholder="none"
@@ -48,8 +48,8 @@ export const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
       />
       {scrSize === "large" &&
         <Blob
-          position={"blob_position-elementary"}
-          color={"blob_fill-light_green"}
+          position={"elementary"}
+          color={"light_green"}
         />
       }
       <LearningPlan

@@ -1,6 +1,7 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 import { StaticImage } from "gatsby-plugin-image"
+import clsx from "clsx"
 
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
@@ -8,37 +9,37 @@ import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
 import atIcon from "../../../images/icon_at.svg"
 import phoneIcon from "../../../images/icon_phone.svg"
 
-import "./contact.scss"
+import * as styles from "./Contact.module.scss"
 
 export const Contact = ({ scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className={styles.contact}>
       <OvalHeader
         headerText="Kontakt"
         bgColor="background-blue"
         width="oval_header-narrow"
       />
-      <div className="contact__content">
+      <div className={styles.contact__content}>
         <Fade left duration={dur}>
-          <div className="contact__info">
-            <div className="contact__info_element">
+          <div className={styles.contact__info}>
+            <div className={styles.contact__info_element}>
               <img
-                className="contact__info_icon"
+                className={styles.contact__info_icon}
                 src={atIcon}
                 alt="at icon"
               ></img>
-              <p className="contact__info_txt txt_purple txt_purple--regular">
+              <p className={clsx(styles.contact__info_txt, "txt_purple", "txt_purple--regular")}>
                 jfal@op.pl
               </p>
             </div>
-            <div className="contact__info_element">
+            <div className={styles.contact__info_element}>
               <img
-                className="contact__info_icon"
+                className={styles.contact__info_icon}
                 src={phoneIcon}
                 alt="at icon"
               ></img>
-              <p className="contact__info_txt txt_purple txt_purple--regular">
+              <p className={clsx(styles.contact__info_txt, "txt_purple", "txt_purple--regular")}>
                 500 076 750
               </p>
             </div>
@@ -47,7 +48,7 @@ export const Contact = ({ scrSize }) => {
         {scrSize === "large" &&
           <Fade right duration={dur}>
             <StaticImage
-              className="image_owl-contact"
+              className={styles.image_owl_contact}
               src="../../../images/owls_talk.svg"
               alt=""
               placeholder="none"
@@ -57,14 +58,14 @@ export const Contact = ({ scrSize }) => {
         }
       </div>
       <StaticImage
-        className="contact__a_square"
+        className={styles.contact__a_square}
         src="../../../images/a_square.svg"
         alt=""
         placeholder="none"
         quality="100"
       />
       <StaticImage
-        className="contact__square_root"
+        className={styles.contact__square_root}
         src="../../../images/square_root2.svg"
         alt=""
         placeholder="none"

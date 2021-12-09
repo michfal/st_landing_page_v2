@@ -2,7 +2,7 @@
 @import '../../../style/abstracts/mixins';
 
 
-.finals {
+.contest {
     @include sections_layout;
     &__content {
         @media only screen and (min-width: $size-large) {
@@ -20,14 +20,18 @@
             display: block;
             @include background_image;
             top: 1rem;
-            left: 50%;
-            width: 8rem;
+            left: 40%;
+            width: 9rem;
         }  
     }
-}
-
-.blob_position-finals {
-    left: 10%;
-    top: 5rem;
-    width: 30%;
+    &__a_square {
+        display: none;
+        @media only screen and (min-width: $size-large) {
+            display: block;
+            @include background_image;
+            top: 1rem;
+            left: 10%;
+            width: 3rem;
+        }  
+    }
 }

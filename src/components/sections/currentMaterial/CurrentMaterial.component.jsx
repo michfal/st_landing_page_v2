@@ -8,14 +8,14 @@ import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
 import { ParagraphText } from "../../paragraphText/ParagraphText.component"
 import { Blob } from "../../blob/Blob.component"
 
-import "./currentMaterial.scss"
+import * as styles from "./CurrentMaterial.module.scss"
 
 export const CurrentMaterial = ({ paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
-    <section id="current_material" className="current_material">
-      <div className="current_material__content">
-        <div className="current_material__text">
+    <section id="current_material" className={styles.current_material}>
+      <div className={styles.current_material__content}>
+        <div className={styles.current_material__text}>
           <Fade left duration={dur}>
             <OvalHeader
               headerText="Opracowanie Bieżącego Materiału"
@@ -30,7 +30,7 @@ export const CurrentMaterial = ({ paragraph, scrSize }) => {
         {scrSize === "large" &&
           <Fade right duration={dur}>
             <StaticImage
-              className="image_owl-checklist"
+              className={styles.image_owl_checklist}
               src="../../../images/owls_checklist.svg"
               alt=""
               placeholder="none"
@@ -40,7 +40,7 @@ export const CurrentMaterial = ({ paragraph, scrSize }) => {
         }
       </div>
       <StaticImage
-        className="current_material__square_root_l"
+        className={styles.current_material__square_root_l}
         src="../../../images/square_root3.svg"
         alt=""
         placeholder="none"
@@ -48,8 +48,8 @@ export const CurrentMaterial = ({ paragraph, scrSize }) => {
       />
       {(scrSize === "medium" || scrSize === "large") &&
         <Blob
-          position={"blob_position-current_material"}
-          color={"blob_fill-light_green"}
+          position={"current_material"}
+          color={"light_green"}
         />
       }
     </section>

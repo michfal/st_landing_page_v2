@@ -1,0 +1,78 @@
+@import '../../style/abstracts/mixins';
+
+.blob {
+    display: block;
+    @include background_image;
+}
+//colors
+.light_green {
+    fill: #EFFDFD;;
+}
+
+.violet {
+    fill: #F4F1FE;
+}
+
+.light_violet {
+    fill: #F8F5FE;
+}
+
+
+//positions
+.blob_position_offer_left {
+    display: block;
+    height: 50%;
+    left: 15%;
+    top: 20%;
+}
+
+.blob_position_offer_right {
+    display: block;
+    height: 20%;
+    right: 20%;
+    top: 65%;
+}
+
+.blob_position_structure_left {
+    height: 20%;
+    min-height: 10rem;
+    left: 20%;
+    top: 30%;
+}
+
+.blob_position_structure_right {
+    height: 20%;
+    min-height: 10rem;
+    right: 15%;
+    bottom: 10%;
+}
+
+.blob_position_elementary {
+    height: 20rem;
+    right: 5rem;
+    top: 2rem;
+}
+
+.blob_position_finals {
+    left: 10%;
+    top: 5rem;
+    width: 30%;
+}
+
+.blob_position_contest1 {
+    right: 10%;
+    top: 5rem;
+    width: 30%;
+}
+
+.blob_position_contest2 {
+    left: 30%;
+    top: 5rem;
+    width: 15%;
+}
+
+.blob_position_current_material {
+    left: 10%;
+    top: 2rem;
+    width: 30%;
+}

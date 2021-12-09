@@ -9,14 +9,14 @@ import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
 import { ParagraphText } from "../../paragraphText/ParagraphText.component"
 import { Blob } from "../../blob/Blob.component"
 
-import "./finals.scss"
+import * as styles from "./Finals.module.scss"
 
 export const Finals = ({ info, paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
-    <section id="finals" className="finals">
-      <div className="finals__content">
-        <div className="finals__text">
+    <section id="finals" className={styles.finals}>
+      <div className={styles.finals__content}>
+        <div className={styles.finals__text}>
           <Fade left duration={dur}>
             <OvalHeader
               headerText="Egzamin Maturalny"
@@ -41,7 +41,7 @@ export const Finals = ({ info, paragraph, scrSize }) => {
         }
       </div>
       <StaticImage
-        className="finals__square_root_l"
+        className={styles.finals__square_root_l}
         src="../../../images/square_root3.svg"
         alt=""
         placeholder="none"
@@ -49,8 +49,8 @@ export const Finals = ({ info, paragraph, scrSize }) => {
       />
       {(scrSize === "medium" || scrSize === "large") &&
         <Blob
-          position={"blob_position-finals"}
-          color={"blob_fill-light_green"}
+          position={"finals"}
+          color={"light_green"}
         />
       }
       <LearningPlan info={info} bgColor="background-green" />
