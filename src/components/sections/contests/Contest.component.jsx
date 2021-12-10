@@ -30,10 +30,10 @@ export const Contests = ({ paragraph, scrSize }) => {
           <Fade right duration={dur}>
             <OvalHeader
               headerText="Przygotowanie do konkursów"
-              bgColor="background-orange"
+              color="orange"
             />
             <ParagraphText
-              align={"paragraph_text-right"}
+              align={"right"}
               paragraph={paragraph}
             />
           </Fade>

@@ -17,8 +17,8 @@ export const Contact = ({ scrSize }) => {
     <section id="contact" className={styles.contact}>
       <OvalHeader
         headerText="Kontakt"
-        bgColor="background-blue"
-        width="oval_header-narrow"
+        color="blue"
+        width="narrow"
       />
       <div className={styles.contact__content}>
         <Fade left duration={dur}>

@@ -22,7 +22,7 @@ export const CourseStructure = ({ scrSize }) => {
         <Fade left duration={dur}>
           <OvalHeader
             headerText="36 spotkań po 60 minut"
-            bgColor="background-green"
+            color="green"
           />
         </Fade>
         <h3 className={clsx(styles.structure__conjunction, "txt_gray", "txt_gray--header")}>
@@ -31,7 +31,7 @@ export const CourseStructure = ({ scrSize }) => {
         <Fade right duration={dur}>
           <OvalHeader
             headerText="18 spotkań po 120 minut"
-            bgColor="background-blue"
+            color="blue"
           />
         </Fade>
       </div>

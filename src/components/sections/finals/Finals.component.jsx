@@ -20,10 +20,10 @@ export const Finals = ({ info, paragraph, scrSize }) => {
           <Fade left duration={dur}>
             <OvalHeader
               headerText="Egzamin Maturalny"
-              bgColor="background-green"
+              color="green"
             />
             <ParagraphText
-              align={"paragraph_text-left"}
+              align={"left"}
               paragraph={paragraph}
             />
           </Fade>

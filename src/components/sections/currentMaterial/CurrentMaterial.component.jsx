@@ -19,10 +19,10 @@ export const CurrentMaterial = ({ paragraph, scrSize }) => {
           <Fade left duration={dur}>
             <OvalHeader
               headerText="Opracowanie Bieżącego Materiału"
-              bgColor="background-green"
+              color="green"
             />
             <ParagraphText
-              align={"paragraph_text-left"}
+              align={"left"}
               paragraph={paragraph}
             />
           </Fade>

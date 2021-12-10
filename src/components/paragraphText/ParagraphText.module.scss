@@ -8,12 +8,12 @@
     @media only screen and (min-width: $size-large) {
         margin: auto;
     }
-    &-left {
+    &_left {
         @media only screen and (min-width: $size-large) {
             text-align: left;
         }
     }
-    &-right {
+    &_right {
         @media only screen and (min-width: $size-large) {
             text-align: right;
         }

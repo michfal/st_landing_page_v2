@@ -30,10 +30,10 @@ export const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
           <div className={styles.elementary_egzam__text}>
             <OvalHeader
               headerText="Egzamin 8-klasisty"
-              bgColor="background-blue"
+              color="blue"
             />
             <ParagraphText
-              align={"paragraph_text-right"}
+              align={"right"}
               paragraph={paragraph}
             />
           </div>
