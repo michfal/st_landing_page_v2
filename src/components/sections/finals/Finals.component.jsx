@@ -53,7 +53,10 @@ export const Finals = ({ info, paragraph, scrSize }) => {
           color={"light_green"}
         />
       }
-      <LearningPlan info={info} bgColor="background-green" />
+      <LearningPlan 
+        info={info} 
+        color="green" 
+      />
     </section>
   )
 }

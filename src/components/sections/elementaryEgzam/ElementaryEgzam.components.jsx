@@ -54,8 +54,8 @@ export const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
       }
       <LearningPlan
         info={info}
-        bgColor="background-blue"
-        border="lp_content--border_blue"
+        color="blue"
+        border="blue"
       />
     </section>
   )

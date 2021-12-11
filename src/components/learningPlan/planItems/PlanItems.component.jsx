@@ -2,21 +2,27 @@ import React from "react"
 import nextId from "react-id-generator"
 import clsx from "clsx"
 
-import { setColor } from "../../logic/learningPlanLogic"
+import { setColor } from "../../logic/setColor"
 
-import "./planItems.scss"
+import * as styles from "./PlanItems.module.scss"
 
 export const PlanItems = ({info, border, planOpenState}) => {
-    
+
+    const pointColors = {
+      "point_green": styles.point_green,
+      "point_blue": styles.point_blue,
+      "point_violet": styles.point_green
+    }
+
     return (
-      <div className={clsx("lp_content", border, planOpenState && "learning_plan_display")}>
+      <div className={clsx(styles.lp_content, border && styles.lp_content_border_blue, planOpenState && styles.learning_plan_display)}>
         {info.map((e, i) => {
           return (
-            <div key={nextId()} className="lp_content__item">
-              <div className={`lp_content__item_point ${setColor(i)}`}>
-                <h1 className="learning_plan_counter txt_white">{i + 1}</h1>
+            <div key={nextId()} className={styles.lp_content__item}>
+              <div className={clsx(styles.lp_content__item_point, pointColors[setColor(i)])}>
+                <h1 className={clsx("learning_plan_counter", "txt_white")}>{i + 1}</h1>
               </div>
-              <p className="txt_gray txt_gray--thematic_scope lp_content__item_text">
+              <p className={clsx("txt_gray", "txt_gray--thematic_scope", styles.lp_content__item_text)}>
                 {e}
               </p>
             </div>

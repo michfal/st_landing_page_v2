@@ -23,7 +23,7 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-    &--border_blue {
+    &_border_blue {
         border: 0.3rem solid $blue-green;
     }
     &__item {
@@ -69,6 +69,3 @@
     transform: scale(1);
 }
 
-.lp_arrow_rotate {
-    transform: rotate(180deg)
-}

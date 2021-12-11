@@ -26,5 +26,20 @@
         transition: transform 0.3s;
         pointer-events: none;
     }
+    &_border_blue {
+        border: 0.3rem solid $blue-green;
+    }
 
+}
+
+.background_green {
+    background-color: $green;
+}
+
+.background_blue {
+    background-color: $blue-green;
+}
+
+.lp_arrow_rotate {
+    transform: rotate(180deg)
 }
