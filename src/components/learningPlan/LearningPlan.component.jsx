@@ -7,7 +7,6 @@ import clsx from "clsx"
 import * as styles from "./LearningPlan.module.scss"
 
 
-
 export const LearningPlan = ({ info, color, border }) => {
   const list = info !== undefined
 
@@ -27,7 +26,7 @@ export const LearningPlan = ({ info, color, border }) => {
           className={clsx(styles.learning_plan__header, bgColors[color], "txt_white", "txt_white--learning_plan")}
         >
           <img
-            className={clsx(styles.learning_plan__scroll_icon, planOpenState && "lp_arrow_rotate")}
+            className={clsx(styles.learning_plan__scroll_icon, planOpenState && styles.lp_arrow_rotate)}
             src={downArrowIcon}
             alt="down arrow icon"
           />

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-scroll"
 import clsx from "clsx"
-
+import { useToggle } from "../logic/useToggle"
 import * as styles from "./Menu.module.scss"
 
 import hamburgerIcon from "../../images/icon_hamburger.svg"
@@ -13,16 +13,19 @@ const btnClick = e => {
 }
 
 export const Menu = () => {
+
+  const [planOpenState, setPlanOpen] = useToggle()
+
   return (
     <>
-      <button className={styles.menu_button} onClick={btnClick}>
+      <button className={styles.menu_button} onClick={setPlanOpen}>
         <img
           className={styles.menu_button__icon}
           src={hamburgerIcon}
           alt="menu icon"
         />
       </button>
-      <div className={styles.menu}>
+      <div className={clsx(styles.menu, planOpenState && styles.menu_display)}>
         <Link
           className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
