@@ -7,11 +7,6 @@ import * as styles from "./Menu.module.scss"
 import hamburgerIcon from "../../images/icon_hamburger.svg"
 
 
-const btnClick = e => {
-  const element = document.querySelector(".menu")
-  element.classList.toggle(styles.menu_display)
-}
-
 export const Menu = () => {
 
   const [planOpenState, setPlanOpen] = useToggle()

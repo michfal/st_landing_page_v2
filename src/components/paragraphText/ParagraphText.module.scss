@@ -6,7 +6,7 @@
     @include content_width;
     text-align: center;
     @media only screen and (min-width: $size-large) {
-        margin: auto;
+        margin: 1rem auto;
     }
     &_left {
         @media only screen and (min-width: $size-large) {
