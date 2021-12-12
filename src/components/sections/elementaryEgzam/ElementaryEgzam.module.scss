@@ -13,9 +13,6 @@
             @include sections_text
         }
     }
-    // &__image_owl {
-    //     width: 20rem;
-    // }
     &__square_root_l {
         display: none;
         @media only screen and (min-width: $size-large) {
@@ -27,9 +24,3 @@
         }        
     }
 }
-
-// .blob_position-elementary {
-//     height: 20rem;
-//     right: 5rem;
-//     top: 2rem;
-// }
