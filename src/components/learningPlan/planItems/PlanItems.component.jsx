@@ -11,7 +11,7 @@ export const PlanItems = ({info, border, planOpenState}) => {
     const pointColors = {
       "point_green": styles.point_green,
       "point_blue": styles.point_blue,
-      "point_violet": styles.point_green
+      "point_violet": styles.point_violet
     }
 
     return (
