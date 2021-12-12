@@ -2,15 +2,15 @@ import React from "react"
 import { Link } from "react-scroll"
 import { StaticImage } from "gatsby-plugin-image"
 
-import "./hero.scss"
+import * as styles from "./Hero.module.scss"
 
 import downArrowIcon from "../../../images/arrow.svg"
 
-const Hero = () => {
+export const Hero = () => {
   return (
-    <section id="hero" className="hero">
+    <section id="hero" className={styles.hero}>
       <StaticImage
-        className="hero__logo"
+        className={styles.hero__logo}
         src="../../../images/st_logo.svg"
         alt="st logo"
         placeholder="none"
@@ -25,7 +25,7 @@ const Hero = () => {
         duration={1000}
       >
         <img
-          className="hero__scroll_icon"
+          className={styles.hero__scroll_icon}
           src={downArrowIcon}
           alt="down arrow icon"
         />
@@ -34,5 +34,3 @@ const Hero = () => {
     </section>
   )
 }
-
-export default Hero

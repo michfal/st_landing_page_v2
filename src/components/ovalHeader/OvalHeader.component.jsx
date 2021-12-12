@@ -1,15 +1,19 @@
 import React from "react"
+import clsx from "clsx"
 
-import "./ovalHeader.scss"
+import * as styles from "./OvalHeader.module.scss"
 
-const OvalHeader = props => {
-  const { headerText, bgColor, width } = props
+export const OvalHeader = ({ headerText, color, width }) => {
+
+  const bgColors = {
+    "green": styles.background_green,
+    "blue": styles.background_blue,
+    "orange": styles.background_orange
+  }
 
   return (
-    <h4 className={`oval_header txt_white ${bgColor} ${width ? width : ""}`}>
+    <h4 className={clsx(styles.oval_header, "txt_white", "txt_white--oval_header", bgColors[color], width && styles.oval_header_narrow)}>
       {headerText}
     </h4>
   )
 }
-
-export default OvalHeader

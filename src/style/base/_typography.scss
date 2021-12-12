@@ -25,7 +25,7 @@ a:hover {
   color: $dark-font;
   &--regular {
     font-size: 1.1rem;
-    line-height: 3rem;
+    line-height: 2.5rem;
     font-weight: 400;
     // text-align: center;
     @media only screen and (min-width: $size-medium) {
@@ -33,7 +33,7 @@ a:hover {
     }
   }
   &--point {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.4rem;
     font-weight: 700;
   }
@@ -48,15 +48,17 @@ a:hover {
   text-align: center;
   &--point {
     font-size: 0.9rem;
+    line-height: 1.5rem;
     @media only screen and (min-width: $size-medium) {
       font-size: 1.2rem;
+      line-height: 2rem;
     }
   }
   &--header {
     font-size: 1.5rem;
     font-weight: 400;
     @media only screen and (min-width: $size-medium) {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
   &--thematic_scope {
@@ -72,6 +74,14 @@ a:hover {
   // @media only screen and (min-width: $size-medium) {
   //   font-size: 1.3rem;
   // }
+  &--oval_header {
+    font-size: 1rem;
+    // white-space: nowrap;
+    @media only screen and (min-width: $size-medium) {
+      font-size: 1.2rem;
+      white-space: nowrap;
+    }
+  }
   &--learning_plan {
     font-size: 0.8rem;
     @media only screen and (min-width: $size-medium) {

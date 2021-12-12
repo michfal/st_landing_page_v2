@@ -1,15 +1,16 @@
 import React from "react"
 import { Link } from "react-scroll"
+import clsx from "clsx"
 
-import "./footer.scss"
+import * as styles from "./Footer.module.scss"
 
 const year = new Date().getFullYear()
 
-const Footer = () => {
+export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
       <Link
-        className="footer__element footer__link txt_purple txt_purple--footer"
+        className={clsx(styles.footer__element, styles.footer__link, "txt_purple", "txt_purple--footer")}
         activeClass="active"
         to="offer"
         spy={true}
@@ -24,5 +25,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer

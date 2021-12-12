@@ -1,28 +1,28 @@
 import React from "react"
 import { Link } from "react-scroll"
-
-import "./menu.scss"
+import clsx from "clsx"
+import { useToggle } from "../logic/useToggle"
+import * as styles from "./Menu.module.scss"
 
 import hamburgerIcon from "../../images/icon_hamburger.svg"
 
-const btnClick = e => {
-  const element = document.querySelector(".menu")
-  element.classList.toggle("menu_display")
-}
 
-const Menu = () => {
+export const Menu = () => {
+
+  const [planOpenState, setPlanOpen] = useToggle()
+
   return (
     <>
-      <button className="menu_button" onClick={btnClick}>
+      <button className={styles.menu_button} onClick={setPlanOpen}>
         <img
-          className="menu_button__icon"
+          className={styles.menu_button__icon}
           src={hamburgerIcon}
           alt="menu icon"
         />
       </button>
-      <div className="menu">
+      <div className={clsx(styles.menu, planOpenState && styles.menu_display)}>
         <Link
-          className="txt_white menu__item"
+          className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="offer"
           spy={true}
@@ -32,7 +32,7 @@ const Menu = () => {
           Oferta
         </Link>
         <Link
-          className="txt_white menu__item"
+          className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="structure"
           spy={true}
@@ -42,7 +42,7 @@ const Menu = () => {
           Struktura Kursu
         </Link>
         <Link
-          className="txt_white menu__item"
+          className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="elementary_egzam"
           spy={true}
@@ -52,7 +52,7 @@ const Menu = () => {
           Egzamin 8{"\u00A0"}klasisty
         </Link>
         <Link
-          className="txt_white menu__item"
+          className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="finals"
           spy={true}
@@ -62,7 +62,7 @@ const Menu = () => {
           Egzamin Maturalny
         </Link>
         <Link
-          className="txt_white menu__item"
+          className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="contest"
           spy={true}
@@ -72,7 +72,7 @@ const Menu = () => {
           Przygotowanie do Konkursów
         </Link>
         <Link
-          className="txt_white menu__item"
+          className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="current_material"
           spy={true}
@@ -82,7 +82,7 @@ const Menu = () => {
           Bieżący Materiał
         </Link>
         <Link
-          className="txt_white menu__item"
+          className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="contact"
           spy={true}
@@ -95,5 +95,3 @@ const Menu = () => {
     </>
   )
 }
-
-export default Menu

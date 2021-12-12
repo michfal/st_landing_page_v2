@@ -4,8 +4,9 @@
 
 .contact {
     @include sections_layout;
+    padding-top: 1rem;
     @media only screen and (min-width: $size-large) {
-        height: 80vh;
+        min-height: 50vh;
     }
     @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
         height: 40vh;
@@ -55,7 +56,7 @@
         @media only screen and (min-width: $size-large) {
             display: block;
             @include background_image;
-            top: 5rem;
+            top: 2.5rem;
             right: 15%;
             width: 7rem;
         }  
@@ -65,9 +66,13 @@
         @media only screen and (min-width: $size-large) {
             display: block;
             @include background_image;
-            top: 4rem;
+            top: 2rem;
             left: 15%;
             width: 5rem;
         }  
     }
+}
+
+.image_owl_contact {
+    width: 25rem;
 }

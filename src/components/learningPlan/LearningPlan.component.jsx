@@ -1,55 +1,40 @@
 import React from "react"
-import nextId from "react-id-generator"
 import downArrowIcon from "../../images/arrow.svg"
-import { setColor, planOpen } from "../logic/learningPlanLogic"
+import { useToggle } from "../logic/useToggle"
+import { PlanItems } from "./planItems/PlanItems.component"
+import clsx from "clsx" 
+
+import * as styles from "./LearningPlan.module.scss"
 
 
-import "./learningPlan.scss"
-
-
-const planItem = (info, border) => {
-  return (
-    <div className={`lp_content ${border}`}>
-      {info.map((e, i) => {
-        return (
-          <div key={nextId()} className="lp_content__item">
-            <div className={`lp_content__item_point ${setColor(i)}`}>
-              <h1 className="learning_plan_counter txt_white">{i + 1}</h1>
-            </div>
-            <p className="txt_gray txt_gray--thematic_scope lp_content__item_text">
-              {e}
-            </p>
-          </div>
-        )
-      })}
-    </div>
-  )
-}
-
-const LearningPlan = (props) => {
-  const { info, bgColor, border } = props
+export const LearningPlan = ({ info, color, border }) => {
   const list = info !== undefined
 
+  const bgColors = {
+    "green": styles.background_green,
+    "blue": styles.background_blue,
+  }
+
+  const [planOpenState, setPlanOpen] = useToggle()
+  
   return (
     <>
-      <div className="learning_plan">
+      <div className={styles.learning_plan}>
         <button
-          onClick={planOpen}
+          onClick={setPlanOpen}
           tabIndex={0}
-          className={`learning_plan__header ${bgColor} txt_white txt_white--learning_plan`}
+          className={clsx(styles.learning_plan__header, bgColors[color], "txt_white", "txt_white--learning_plan")}
         >
           <img
-            className="learning_plan__scroll_icon"
+            className={clsx(styles.learning_plan__scroll_icon, planOpenState && styles.lp_arrow_rotate)}
             src={downArrowIcon}
             alt="down arrow icon"
           />
           Przykładowy Program
         </button>
 
-        {list ? planItem(info, border) : null}
+        {list && <PlanItems info={info} border={border} planOpenState={planOpenState}/>}
       </div>
     </>
   )
 }
-
-export default LearningPlan

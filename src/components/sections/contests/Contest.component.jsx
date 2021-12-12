@@ -4,19 +4,18 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
-import OvalHeader from "../../ovalHeader/OvalHeader.component"
-import ParagraphText from "../../paragraphText/ParagraphText.component"
-import Blob from "../../blob/Blob.component"
+import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
+import { ParagraphText } from "../../paragraphText/ParagraphText.component"
+import { Blob } from "../../blob/Blob.component"
 
-import "./contest.scss"
+import * as styles from "./Contest.module.scss"
 
-const Contests = props => {
-  const { paragraph, scrSize } = props
+export const Contests = ({ paragraph, scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
-    <section id="contest" className="contest">
-      <div className="contest__content">
-        {scrSize === "large" ? (
+    <section id="contest" className={styles.contest}>
+      <div className={styles.contest__content}>
+        {scrSize === "large" &&
           <Fade left duration={dur}>
             <StaticImage
               className="image_owl"
@@ -26,48 +25,46 @@ const Contests = props => {
               quality="100"
             />
           </Fade>
-        ) : null}
-        <div className="contest__text">
+        }
+        <div className={styles.contest__text}>
           <Fade right duration={dur}>
             <OvalHeader
               headerText="Przygotowanie do konkursów"
-              bgColor="background-orange"
+              color="orange"
             />
             <ParagraphText
-              align={"paragraph_text-right"}
+              align={"right"}
               paragraph={paragraph}
             />
           </Fade>
         </div>
       </div>
       <StaticImage
-        className="contest__a_square"
+        className={styles.contest__a_square}
         src="../../../images/a_square.svg"
         alt=""
         placeholder="none"
         quality="100"
       />
       <StaticImage
-        className="contest__square_root_l"
+        className={styles.contest__square_root_l}
         src="../../../images/square_root3.svg"
         alt=""
         placeholder="none"
         quality="100"
       />
-      {scrSize === "medium" || scrSize === "large" ? (
+      {(scrSize === "medium" || scrSize === "large") &&
         <Blob
-          position={"blob_position-contest1"}
-          color={"blob_fill-light_green"}
+          position={"contest1"}
+          color={"light_green"}
         />
-      ) : null}
-      {scrSize === "medium" || scrSize === "large" ? (
+      }
+      {(scrSize === "medium" || scrSize === "large") &&
         <Blob
-          position={"blob_position-contest2"}
-          color={"blob_fill-light_green"}
+          position={"contest2"}
+          color={"light_green"}
         />
-      ) : null}
+      }
     </section>
   )
 }
-
-export default Contests

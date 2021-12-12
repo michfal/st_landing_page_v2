@@ -1,8 +1,15 @@
 @import '../../../style/abstracts/variables';
 @import '../../../style/abstracts/mixins';
 
-.elementary_egzam {
+
+.current_material {
     @include sections_layout;
+    @media only screen and (min-height: $size-large) and (min-width: $size-medium) {
+        height: 50vh;
+    } 
+    @media only screen and (min-width: $size-large) {
+        min-height: 40vh
+    } 
     &__content {
         @media only screen and (min-width: $size-large) {
             @include sections_content
@@ -10,26 +17,23 @@
     }
     &__text {
         @media only screen and (min-width: $size-large) {
-            @include sections_text
+            @include sections_text;
+            height: 50vh;
         }
-    }
-    &__image_owl {
-        width: 20rem;
     }
     &__square_root_l {
         display: none;
         @media only screen and (min-width: $size-large) {
             display: block;
             @include background_image;
-            top: 4rem;
-            left: 35%;
-            width: 6rem;
-        }        
+            top: 1rem;
+            right: 30%;
+            width: 9rem;
+        }  
     }
 }
 
-.blob_position-elementary {
-    height: 20rem;
-    right: 5rem;
-    top: 2rem;
+.image_owl_checklist {
+    width: 18rem;
+    height: 26rem
 }

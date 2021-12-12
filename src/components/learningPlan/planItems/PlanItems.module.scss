@@ -1,33 +1,4 @@
-@import '../../style/abstracts/variables';
-
-.learning_plan {
-    margin: auto;
-    z-index: 1;
-    &__header {
-        height: 1.5rem;
-        width: 70%;
-        max-width: 15rem;
-        min-width: 10rem;
-        margin: auto;
-        padding: 0.2rem 1rem 0.2rem 1rem;
-        border-radius: 1rem;
-        border: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        transition: transform 0.5s;
-        &:hover {
-            transform: scale(1.05)
-        }
-    }
-    &__scroll_icon {
-        width: 1.2rem;
-        margin: 0;
-        transition: transform 0.3s;
-        pointer-events: none;
-    }
-
-}
+@import '../../../style/abstracts/variables';
 
 .lp_content {
     border: 0.3rem solid $green;
@@ -52,7 +23,7 @@
         flex-direction: row;
         flex-wrap: wrap;
     }
-    &--border_blue {
+    &_border_blue {
         border: 0.3rem solid $blue-green;
     }
     &__item {
@@ -98,6 +69,3 @@
     transform: scale(1);
 }
 
-.lp_arrow_rotate {
-    transform: rotate(180deg)
-}
