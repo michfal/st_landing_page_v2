@@ -8,6 +8,8 @@ import { setFadeDuration } from "../../logic/setFadeDuration"
 import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
 import atIcon from "../../../images/icon_at.svg"
 import phoneIcon from "../../../images/icon_phone.svg"
+import aSquare from "../../../images/a_square.svg"
+import squareRoot2 from "../../../images/square_root2.svg"
 
 import * as styles from "./Contact.module.scss"
 
@@ -57,7 +59,9 @@ export const Contact = ({ scrSize }) => {
           </Fade>
         }
       </div>
-      <StaticImage
+      <img src={aSquare} className={styles.contact__a_square} alt="a square"></img>
+      <img src={squareRoot2} className={styles.contact__square_root} alt="square root"></img>
+      {/* <StaticImage
         className={styles.contact__a_square}
         src="../../../images/a_square.svg"
         alt=""
@@ -70,7 +74,7 @@ export const Contact = ({ scrSize }) => {
         alt=""
         placeholder="none"
         quality="100"
-      />
+      /> */}
     </section>
   )
 }
