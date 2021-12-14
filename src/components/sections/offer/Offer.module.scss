@@ -81,6 +81,7 @@
             @include background_image;
             bottom: 8%;
             left: 3%;
+            width: 4rem;
         }
         @media only screen and (min-width: $size-large) {
             left: 5%;

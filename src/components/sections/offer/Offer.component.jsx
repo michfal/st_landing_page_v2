@@ -11,6 +11,8 @@ import currentIcon from "../../../images/icon_current.svg"
 import { Blob } from "../../blob/Blob.component"
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
+import aSquare from "../../../images/a_square.svg"
+
 import * as styles from "./Offer.module.scss"
 
 export const Offer = ({ scrSize }) => {
@@ -86,7 +88,7 @@ export const Offer = ({ scrSize }) => {
         />
       }
 
-      <StaticImage
+      {/* <StaticImage
         className={styles.offer__a_square_l}
         src="../../../images/a_square.svg"
         alt=""
@@ -99,7 +101,11 @@ export const Offer = ({ scrSize }) => {
         alt=""
         placeholder="none"
         quality="100"
-      />
+      /> */}
+
+      <img src={aSquare} className={styles.offer__a_square_l} alt="a square"></img>
+      <img src={aSquare} className={styles.offer__a_square_r} alt="a square"></img>
+
     </section>
   )
 }

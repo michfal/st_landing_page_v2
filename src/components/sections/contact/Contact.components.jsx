@@ -59,22 +59,11 @@ export const Contact = ({ scrSize }) => {
           </Fade>
         }
       </div>
+
       <img src={aSquare} className={styles.contact__a_square} alt="a square"></img>
+      
       <img src={squareRoot2} className={styles.contact__square_root} alt="square root"></img>
-      {/* <StaticImage
-        className={styles.contact__a_square}
-        src="../../../images/a_square.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      />
-      <StaticImage
-        className={styles.contact__square_root}
-        src="../../../images/square_root2.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      /> */}
+
     </section>
   )
 }

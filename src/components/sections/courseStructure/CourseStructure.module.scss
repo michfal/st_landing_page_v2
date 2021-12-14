@@ -50,6 +50,7 @@
         @media only screen and (min-width: $size-medium) {
             display: block;
             @include background_image;
+            width: 5rem;
             bottom: 5%;
             left: 10%;
         } 
@@ -59,6 +60,7 @@
         @media only screen and (min-width: $size-medium) {
             display: block;
             @include background_image;
+            width: 5rem;
             bottom: 0%;
             right: 10%;
         }   
