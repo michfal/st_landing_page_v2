@@ -2,7 +2,7 @@
 
 .lp_content {
     border: 0.3rem solid $green;
-    padding: 1rem 0 0 0;
+    padding: 1rem 0 1rem 0;
     border-radius: 2rem;
     margin: auto;
     overflow: hidden;
@@ -10,6 +10,7 @@
     top: -1rem;
     z-index: -1;
     transform-origin: top;
+    width: 90vw;
     height: 0;
     transform: scale(0);
     transition: transform 0.3s;
