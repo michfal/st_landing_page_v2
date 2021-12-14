@@ -7,6 +7,7 @@ import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
 import { ParagraphText } from "../../paragraphText/ParagraphText.component"
 import { Blob } from "../../blob/Blob.component"
 import { setFadeDuration } from "../../logic/setFadeDuration"
+import squareRoot2 from "../../../images/square_root2.svg"
 
 import * as styles from "./ElementaryEgzam.module.scss"
 
@@ -39,13 +40,16 @@ export const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
           </div>
         </Fade>
       </div>
-      <StaticImage
+      {/* <StaticImage
         className={styles.elementary_egzam__square_root_l}
         src="../../../images/square_root2.svg"
         alt=""
         placeholder="none"
         quality="100"
-      />
+      /> */}
+
+      <img src={squareRoot2} className={styles.elementary_egzam__square_root_l} alt="square root"></img>
+
       {scrSize === "large" &&
         <Blob
           position={"elementary"}

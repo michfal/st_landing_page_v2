@@ -8,6 +8,8 @@ import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
 import { ParagraphText } from "../../paragraphText/ParagraphText.component"
 import { Blob } from "../../blob/Blob.component"
 
+import squareRoot3 from "../../../images/square_root3.svg"
+
 import * as styles from "./CurrentMaterial.module.scss"
 
 export const CurrentMaterial = ({ paragraph, scrSize }) => {
@@ -39,13 +41,17 @@ export const CurrentMaterial = ({ paragraph, scrSize }) => {
           </Fade>
         }
       </div>
-      <StaticImage
+      {/* <StaticImage
         className={styles.current_material__square_root_l}
         src="../../../images/square_root3.svg"
         alt=""
         placeholder="none"
         quality="100"
-      />
+      /> */}
+      
+      <img src={squareRoot3} className={styles.current_material__square_root_l} alt="square root"></img>
+
+
       {(scrSize === "medium" || scrSize === "large") &&
         <Blob
           position={"current_material"}

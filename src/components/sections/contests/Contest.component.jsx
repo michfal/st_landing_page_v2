@@ -8,6 +8,9 @@ import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
 import { ParagraphText } from "../../paragraphText/ParagraphText.component"
 import { Blob } from "../../blob/Blob.component"
 
+import aSquare from "../../../images/a_square.svg"
+import squareRoot3 from "../../../images/square_root3.svg"
+
 import * as styles from "./Contest.module.scss"
 
 export const Contests = ({ paragraph, scrSize }) => {
@@ -39,7 +42,7 @@ export const Contests = ({ paragraph, scrSize }) => {
           </Fade>
         </div>
       </div>
-      <StaticImage
+      {/* <StaticImage
         className={styles.contest__a_square}
         src="../../../images/a_square.svg"
         alt=""
@@ -52,7 +55,12 @@ export const Contests = ({ paragraph, scrSize }) => {
         alt=""
         placeholder="none"
         quality="100"
-      />
+      /> */}
+      
+      <img src={aSquare} className={styles.contest__a_square} alt="a square"></img>
+      
+      <img src={squareRoot3} className={styles.contest__square_root_l} alt="square root"></img>
+
       {(scrSize === "medium" || scrSize === "large") &&
         <Blob
           position={"contest1"}

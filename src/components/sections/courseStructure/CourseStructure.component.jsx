@@ -7,6 +7,9 @@ import { Blob } from "../../blob/Blob.component"
 import { OvalHeader } from "../../ovalHeader/OvalHeader.component"
 import { setFadeDuration } from "../../logic/setFadeDuration"
 
+import aSquare from "../../../images/a_square.svg"
+import squareRoot1 from "../../../images/square_root1.svg"
+
 import * as styles from "./CourseStructure.module.scss"
 
 export const CourseStructure = ({ scrSize }) => {
@@ -36,7 +39,7 @@ export const CourseStructure = ({ scrSize }) => {
         </Fade>
       </div>
 
-      <StaticImage
+      {/* <StaticImage
         className={styles.structure__a_square_l}
         src="../../../images/a_square.svg"
         alt=""
@@ -49,7 +52,11 @@ export const CourseStructure = ({ scrSize }) => {
         alt=""
         placeholder="none"
         quality="100"
-      />
+      /> */}
+
+      <img src={aSquare} className={styles.structure__a_square_l} alt="a square"></img>
+      
+      <img src={squareRoot1} className={styles.structure__square_root_r} alt="square root"></img>
 
       {scrSize === "large" &&
         <Blob
