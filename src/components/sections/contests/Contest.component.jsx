@@ -42,20 +42,6 @@ export const Contests = ({ paragraph, scrSize }) => {
           </Fade>
         </div>
       </div>
-      {/* <StaticImage
-        className={styles.contest__a_square}
-        src="../../../images/a_square.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      />
-      <StaticImage
-        className={styles.contest__square_root_l}
-        src="../../../images/square_root3.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      /> */}
       
       <img src={aSquare} className={styles.contest__a_square} alt="a square"></img>
       

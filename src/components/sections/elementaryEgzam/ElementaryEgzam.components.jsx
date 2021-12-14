@@ -40,13 +40,6 @@ export const ElementaryEgzam = ({ info, paragraph, scrSize }) => {
           </div>
         </Fade>
       </div>
-      {/* <StaticImage
-        className={styles.elementary_egzam__square_root_l}
-        src="../../../images/square_root2.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      /> */}
 
       <img src={squareRoot2} className={styles.elementary_egzam__square_root_l} alt="square root"></img>
 

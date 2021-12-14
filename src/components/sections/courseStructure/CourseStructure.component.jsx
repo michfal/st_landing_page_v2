@@ -1,6 +1,5 @@
 import React from "react"
 import clsx from "clsx"
-import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 import { Blob } from "../../blob/Blob.component"
 
@@ -39,20 +38,6 @@ export const CourseStructure = ({ scrSize }) => {
         </Fade>
       </div>
 
-      {/* <StaticImage
-        className={styles.structure__a_square_l}
-        src="../../../images/a_square.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      />
-      <StaticImage
-        className={styles.structure__square_root_r}
-        src="../../../images/square_root1.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      /> */}
 
       <img src={aSquare} className={styles.structure__a_square_l} alt="a square"></img>
       

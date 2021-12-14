@@ -1,7 +1,6 @@
 import React from "react"
 import clsx from "clsx"
 
-import { StaticImage } from "gatsby-plugin-image"
 import Fade from "react-reveal/Fade"
 
 import elementaryIcon from "../../../images/icon_elementary.svg"
@@ -87,21 +86,6 @@ export const Offer = ({ scrSize }) => {
           color={"violet"}
         />
       }
-
-      {/* <StaticImage
-        className={styles.offer__a_square_l}
-        src="../../../images/a_square.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      />
-      <StaticImage
-        className={styles.offer__a_square_r}
-        src="../../../images/a_square.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      /> */}
 
       <img src={aSquare} className={styles.offer__a_square_l} alt="a square"></img>
       <img src={aSquare} className={styles.offer__a_square_r} alt="a square"></img>

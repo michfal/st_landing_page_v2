@@ -42,13 +42,6 @@ export const Finals = ({ info, paragraph, scrSize }) => {
           </Fade>
         }
       </div>
-      {/* <StaticImage
-        className={styles.finals__square_root_l}
-        src="../../../images/square_root3.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      /> */}
 
       <img src={squareRoot3} className={styles.finals__square_root_l} alt="square root"></img>
 
