@@ -3097,6 +3097,16 @@ var plugins = [{
     "include_favicon": true,
     "cacheDigest": "0b3554eebe289e30f4762f6ecb1b4f42"
   }
+}, {
+  name: 'gatsby-plugin-google-fonts-v2',
+  plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-google-fonts-v2/gatsby-ssr */ "./node_modules/gatsby-plugin-google-fonts-v2/gatsby-ssr.js"),
+  options: {
+    "plugins": [],
+    "fonts": [{
+      "family": "Lato",
+      "weights": ["300", "400", "700", "900"]
+    }]
+  }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
 //   {
@@ -4495,6 +4505,297 @@ function stripPrefix(str, prefix = ``) {
 
   return str;
 }
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-google-fonts-v2/constants.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-google-fonts-v2/constants.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.ERRORS = exports.BASE_URL_V1 = exports.BASE_URL = exports.FIXED_WEIGHTS = exports.VARIABLE_WEIGHT_REGEX = void 0;
+exports.VARIABLE_WEIGHT_REGEX = /(^\d{3})(?:[.]{2})(\d{3}$)/gm;
+exports.FIXED_WEIGHTS = ['100', '200', '300', '400', '500', '600', '700', '800', '900'];
+exports.BASE_URL = 'https://fonts.googleapis.com/css2';
+exports.BASE_URL_V1 = 'https://fonts.googleapis.com/css';
+exports.ERRORS = {
+  NOT_VALID_WEIGHT: 'Regular font selected but selected weights not valid',
+  TOO_MANY_WEIGHTS: 'Variable font supports a maximum of 2 weights (regular and italic)',
+  NOT_VALID_VARIABLE_WEIGHT_FORMAT: 'The used weight format did not match. The valid format is (min)..(max) where min and max are 3 digit numbers',
+  VARIABLE_LEGACY_CONFLICT: 'You want to use v1 API but are requesting variable fonts. That will not work. Remove one or the other'
+};
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-google-fonts-v2/functions.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-google-fonts-v2/functions.js ***!
+  \*****************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __assign = this && this.__assign || function () {
+  __assign = Object.assign || function (t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.setDisplay = exports.assembleFontsLink = exports.getFontWeight = exports.formatFontName = exports.checkNoLegacyVariableConflict = exports.filterFonts = void 0;
+
+var constants_1 = __webpack_require__(/*! ./constants */ "./node_modules/gatsby-plugin-google-fonts-v2/constants.js");
+
+var filterFonts = function (options) {
+  var errors = [];
+  var accepted = [];
+  var fonts = options.fonts;
+
+  var _loop_1 = function (font) {
+    var family = font.family,
+        variable = font.variable,
+        weights = font.weights;
+
+    if (!variable) {
+      if (weights) {
+        var validWeights = weights.filter(function (weight) {
+          if (constants_1.FIXED_WEIGHTS.includes(weight)) {
+            return true;
+          } else {
+            errors.push({
+              family: family,
+              weight: weight,
+              reason: constants_1.ERRORS.NOT_VALID_WEIGHT
+            });
+          }
+        });
+        accepted.push(__assign(__assign({}, font), {
+          weights: validWeights
+        }));
+      } else {
+        accepted.push(__assign({}, font));
+      }
+    } else {
+      // if variable and len > 2
+      if (weights) {
+        if (weights.length > 2) {
+          errors.push({
+            family: family,
+            reason: constants_1.ERRORS.TOO_MANY_WEIGHTS
+          });
+          return "continue";
+        }
+
+        var validWeights = weights.filter(function (weight) {
+          if (weight && weight.match(constants_1.VARIABLE_WEIGHT_REGEX)) {
+            return true;
+          } else {
+            errors.push({
+              family: family,
+              weight: weight,
+              reason: constants_1.ERRORS.NOT_VALID_VARIABLE_WEIGHT_FORMAT
+            });
+            return false;
+          }
+        });
+        accepted.push(__assign(__assign({}, font), {
+          weights: validWeights
+        }));
+      }
+    }
+  };
+
+  for (var _i = 0, fonts_1 = fonts; _i < fonts_1.length; _i++) {
+    var font = fonts_1[_i];
+
+    _loop_1(font);
+  }
+
+  return {
+    accepted: accepted,
+    errors: errors
+  };
+};
+
+exports.filterFonts = filterFonts;
+
+var checkNoLegacyVariableConflict = function (options) {
+  var legacy = options.legacy,
+      fonts = options.fonts;
+
+  if (!legacy) {
+    return true;
+  } else {
+    for (var _i = 0, fonts_2 = fonts; _i < fonts_2.length; _i++) {
+      var font = fonts_2[_i];
+
+      if (font.variable) {
+        return false;
+      }
+    }
+  }
+};
+
+exports.checkNoLegacyVariableConflict = checkNoLegacyVariableConflict;
+
+var formatFontName = function (font) {
+  var family = font.family,
+      strictName = font.strictName;
+
+  if (strictName) {
+    return family;
+  }
+
+  return family.split(' ').map(function (token) {
+    return token.replace(/^\w/, function (s) {
+      return s.toUpperCase();
+    });
+  }).join(' ').replace(/ /g, '+');
+};
+
+exports.formatFontName = formatFontName;
+
+var getFontWeight = function (font) {
+  var variable = font.variable,
+      weights = font.weights;
+
+  if (weights) {
+    if (variable) {
+      var boldWeight = weights[0],
+          italWeight = weights[1];
+      return (italWeight ? 'ital,' : '') + "wght@" + (boldWeight ? "" + (italWeight ? '0,' : '') + boldWeight : '') + (boldWeight && italWeight ? ';' : '') + (italWeight ? "1," + italWeight : '');
+    } else {
+      return "wght@" + weights.join(';');
+    }
+  }
+
+  return '';
+};
+
+exports.getFontWeight = getFontWeight;
+
+var assembleFontsLink = function (fonts) {
+  return fonts.map(function (font) {
+    var family = exports.formatFontName(font);
+    var weights = exports.getFontWeight(font);
+    return "family=" + family + (weights ? ":" + weights : '');
+  }).join('&');
+};
+
+exports.assembleFontsLink = assembleFontsLink;
+
+var setDisplay = function (options) {
+  return options.display ? "&display=" + options.display : '&display=swap';
+};
+
+exports.setDisplay = setDisplay;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-google-fonts-v2/gatsby-ssr.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-google-fonts-v2/gatsby-ssr.js ***!
+  \******************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importDefault = this && this.__importDefault || function (mod) {
+  return mod && mod.__esModule ? mod : {
+    "default": mod
+  };
+};
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.onRenderBody = void 0;
+
+var react_1 = __importDefault(__webpack_require__(/*! react */ "react"));
+
+var constants_1 = __webpack_require__(/*! ./constants */ "./node_modules/gatsby-plugin-google-fonts-v2/constants.js");
+
+var utils_1 = __webpack_require__(/*! ./utils */ "./node_modules/gatsby-plugin-google-fonts-v2/utils.js");
+
+var functions_1 = __webpack_require__(/*! ./functions */ "./node_modules/gatsby-plugin-google-fonts-v2/functions.js");
+/* istanbul ignore next */
+
+
+var onRenderBody = function (_a, options) {
+  var setHeadComponents = _a.setHeadComponents; // if legacy mode was used and variable font request was found
+  // exit immediately
+
+  if (!functions_1.checkNoLegacyVariableConflict(options)) {
+    utils_1.log(constants_1.ERRORS.VARIABLE_LEGACY_CONFLICT);
+    return;
+  }
+
+  var link;
+
+  if (!options.legacy) {
+    var finalFonts = functions_1.filterFonts(options);
+
+    if (finalFonts.errors.length > 0 && options.verbose) {
+      utils_1.log('The following fonts/weights were not loaded');
+      utils_1.log(finalFonts.errors);
+    }
+
+    var fonts = functions_1.assembleFontsLink(finalFonts.accepted);
+    link = constants_1.BASE_URL + "?" + fonts + functions_1.setDisplay(options);
+  }
+
+  setHeadComponents([react_1.default.createElement('link', {
+    key: 'fonts',
+    href: link,
+    rel: 'stylesheet'
+  })]);
+};
+
+exports.onRenderBody = onRenderBody;
+
+/***/ }),
+
+/***/ "./node_modules/gatsby-plugin-google-fonts-v2/utils.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/gatsby-plugin-google-fonts-v2/utils.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.log = void 0;
+/* istanbul ignore next */
+
+var log = function (message) {
+  console.log('\n===gatsby-plugin-google-fonts-v2===');
+  console.log(message);
+  console.log('\n');
+};
+
+exports.log = log;
 
 /***/ }),
 
@@ -11457,7 +11758,7 @@ module.exports = require("path");
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
