@@ -18,7 +18,7 @@ export const Contests = ({ paragraph, scrSize }) => {
   return (
     <section id="contest" className={styles.contest}>
       <div className={styles.contest__content}>
-        {scrSize === "large" &&
+        {scrSize === "large" && (
           <Fade left duration={dur}>
             <StaticImage
               className="image_owl"
@@ -28,51 +28,36 @@ export const Contests = ({ paragraph, scrSize }) => {
               quality="100"
             />
           </Fade>
-        }
+        )}
         <div className={styles.contest__text}>
           <Fade right duration={dur}>
             <OvalHeader
               headerText="Przygotowanie do konkursów"
               color="orange"
             />
-            <ParagraphText
-              align={"right"}
-              paragraph={paragraph}
-            />
+            <ParagraphText align={"right"} paragraph={paragraph} />
           </Fade>
         </div>
       </div>
-      {/* <StaticImage
-        className={styles.contest__a_square}
-        src="../../../images/a_square.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      />
-      <StaticImage
-        className={styles.contest__square_root_l}
-        src="../../../images/square_root3.svg"
-        alt=""
-        placeholder="none"
-        quality="100"
-      /> */}
-      
-      <img src={aSquare} className={styles.contest__a_square} alt="a square"></img>
-      
-      <img src={squareRoot3} className={styles.contest__square_root_l} alt="square root"></img>
 
-      {(scrSize === "medium" || scrSize === "large") &&
-        <Blob
-          position={"contest1"}
-          color={"light_green"}
-        />
-      }
-      {(scrSize === "medium" || scrSize === "large") &&
-        <Blob
-          position={"contest2"}
-          color={"light_green"}
-        />
-      }
+      <img
+        src={aSquare}
+        className={styles.contest__a_square}
+        alt="a square"
+      ></img>
+
+      <img
+        src={squareRoot3}
+        className={styles.contest__square_root_l}
+        alt="square root"
+      ></img>
+
+      {(scrSize === "medium" || scrSize === "large") && (
+        <Blob position={"contest1"} color={"light_green"} />
+      )}
+      {(scrSize === "medium" || scrSize === "large") && (
+        <Blob position={"contest2"} color={"light_green"} />
+      )}
     </section>
   )
 }

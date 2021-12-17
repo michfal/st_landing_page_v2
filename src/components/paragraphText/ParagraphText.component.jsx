@@ -7,17 +7,24 @@ export const ParagraphText = ({ align, paragraph }) => {
   const content = paragraph !== undefined
 
   const positions = {
-    "left": styles.paragraph_text_left,
-    "right": styles.paragraph_text_right
+    left: styles.paragraph_text_left,
+    right: styles.paragraph_text_right,
   }
 
   return (
     <>
-      {content &&
-        <p className={clsx("txt_purple", "txt_purple--regular", styles.paragraph_text, positions[align])}>
+      {content && (
+        <p
+          className={clsx(
+            "txt_purple",
+            "txt_purple--regular",
+            styles.paragraph_text,
+            positions[align]
+          )}
+        >
           {paragraph}
         </p>
-      }
+      )}
     </>
   )
 }

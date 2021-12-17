@@ -4,23 +4,21 @@ import clsx from "clsx"
 import * as styles from "./Blob.module.scss"
 
 export const Blob = ({ color, position }) => {
-
   const colorStyles = {
-    "light_green": styles.light_green,
-    "violet": styles.violet,
+    light_green: styles.light_green,
+    violet: styles.violet,
   }
 
   const positions = {
-    "offer_left": styles.blob_position_offer_left,
-    "offer_right": styles.blob_position_offer_right,
-    "structure_left": styles.blob_position_structure_left,
-    "structure_right": styles.blob_position_structure_right,
-    "elementary": styles.blob_position_elementary,
-    "finals": styles.blob_position_finals,
-    "contest1": styles.blob_position_contest1,
-    "contest2": styles.blob_position_contest2,
-    "current_material": styles.blob_position_current_material,
-    
+    offer_left: styles.blob_position_offer_left,
+    offer_right: styles.blob_position_offer_right,
+    structure_left: styles.blob_position_structure_left,
+    structure_right: styles.blob_position_structure_right,
+    elementary: styles.blob_position_elementary,
+    finals: styles.blob_position_finals,
+    contest1: styles.blob_position_contest1,
+    contest2: styles.blob_position_contest2,
+    current_material: styles.blob_position_current_material,
   }
 
   return (

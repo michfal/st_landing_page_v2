@@ -10,7 +10,12 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Link
-        className={clsx(styles.footer__element, styles.footer__link, "txt_purple", "txt_purple--footer")}
+        className={clsx(
+          styles.footer__element,
+          styles.footer__link,
+          "txt_purple",
+          "txt_purple--footer"
+        )}
         activeClass="active"
         to="offer"
         spy={true}
