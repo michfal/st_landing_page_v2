@@ -16,18 +16,15 @@ import { thematicScope, sectionTexts } from "../mock/data"
 
 import "../style/main.scss"
 
-
 export const Layout = () => {
   const [scopeData, setScope] = useState({})
   const [texts, setText] = useState({})
-  const scrSize = useWindowSize();
+  const scrSize = useWindowSize()
 
   useEffect(() => {
     setScope(thematicScope)
     setText(sectionTexts)
-
   }, [])
-
 
   return (
     <>

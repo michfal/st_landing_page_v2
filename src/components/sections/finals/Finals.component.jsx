@@ -20,17 +20,11 @@ export const Finals = ({ info, paragraph, scrSize }) => {
       <div className={styles.finals__content}>
         <div className={styles.finals__text}>
           <Fade left duration={dur}>
-            <OvalHeader
-              headerText="Egzamin Maturalny"
-              color="green"
-            />
-            <ParagraphText
-              align={"left"}
-              paragraph={paragraph}
-            />
+            <OvalHeader headerText="Egzamin Maturalny" color="green" />
+            <ParagraphText align={"left"} paragraph={paragraph} />
           </Fade>
         </div>
-        {scrSize === "large" &&
+        {scrSize === "large" && (
           <Fade right duration={dur}>
             <StaticImage
               className="image_owl"
@@ -40,21 +34,19 @@ export const Finals = ({ info, paragraph, scrSize }) => {
               quality="100"
             />
           </Fade>
-        }
+        )}
       </div>
 
-      <img src={squareRoot3} className={styles.finals__square_root_l} alt="square root"></img>
+      <img
+        src={squareRoot3}
+        className={styles.finals__square_root_l}
+        alt="square root"
+      ></img>
 
-      {(scrSize === "medium" || scrSize === "large") &&
-        <Blob
-          position={"finals"}
-          color={"light_green"}
-        />
-      }
-      <LearningPlan 
-        info={info} 
-        color="green" 
-      />
+      {(scrSize === "medium" || scrSize === "large") && (
+        <Blob position={"finals"} color={"light_green"} />
+      )}
+      <LearningPlan info={info} color="green" />
     </section>
   )
 }

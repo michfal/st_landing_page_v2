@@ -17,11 +17,7 @@ export const Contact = ({ scrSize }) => {
   const dur = setFadeDuration(scrSize)
   return (
     <section id="contact" className={styles.contact}>
-      <OvalHeader
-        headerText="Kontakt"
-        color="blue"
-        width="narrow"
-      />
+      <OvalHeader headerText="Kontakt" color="blue" width="narrow" />
       <div className={styles.contact__content}>
         <Fade left duration={dur}>
           <div className={styles.contact__info}>
@@ -31,7 +27,13 @@ export const Contact = ({ scrSize }) => {
                 src={atIcon}
                 alt="at icon"
               ></img>
-              <p className={clsx(styles.contact__info_txt, "txt_purple", "txt_purple--regular")}>
+              <p
+                className={clsx(
+                  styles.contact__info_txt,
+                  "txt_purple",
+                  "txt_purple--regular"
+                )}
+              >
                 jfal@op.pl
               </p>
             </div>
@@ -41,13 +43,19 @@ export const Contact = ({ scrSize }) => {
                 src={phoneIcon}
                 alt="at icon"
               ></img>
-              <p className={clsx(styles.contact__info_txt, "txt_purple", "txt_purple--regular")}>
+              <p
+                className={clsx(
+                  styles.contact__info_txt,
+                  "txt_purple",
+                  "txt_purple--regular"
+                )}
+              >
                 500 076 750
               </p>
             </div>
           </div>
         </Fade>
-        {scrSize === "large" &&
+        {scrSize === "large" && (
           <Fade right duration={dur}>
             <StaticImage
               className={styles.image_owl_contact}
@@ -57,13 +65,20 @@ export const Contact = ({ scrSize }) => {
               quality="100"
             />
           </Fade>
-        }
+        )}
       </div>
 
-      <img src={aSquare} className={styles.contact__a_square} alt="a square"></img>
-      
-      <img src={squareRoot2} className={styles.contact__square_root} alt="square root"></img>
+      <img
+        src={aSquare}
+        className={styles.contact__a_square}
+        alt="a square"
+      ></img>
 
+      <img
+        src={squareRoot2}
+        className={styles.contact__square_root}
+        alt="square root"
+      ></img>
     </section>
   )
 }

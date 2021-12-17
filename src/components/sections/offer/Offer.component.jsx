@@ -33,7 +33,13 @@ export const Offer = ({ scrSize }) => {
                 src={elementaryIcon}
                 alt="elementary icon"
               ></img>
-              <h2 className={clsx(styles.offer__list_element_text, "txt_purple", "txt_purple--point")}>
+              <h2
+                className={clsx(
+                  styles.offer__list_element_text,
+                  "txt_purple",
+                  "txt_purple--point"
+                )}
+              >
                 Egzaminu <br /> 8-klasisty
               </h2>
             </div>
@@ -43,7 +49,13 @@ export const Offer = ({ scrSize }) => {
                 src={contestIcon}
                 alt="contest icon"
               ></img>
-              <h2 className={clsx(styles.offer__list_element_text, "txt_purple", "txt_purple--point")}>
+              <h2
+                className={clsx(
+                  styles.offer__list_element_text,
+                  "txt_purple",
+                  "txt_purple--point"
+                )}
+              >
                 Egzaminu <br /> Maturalnego
               </h2>
             </div>
@@ -57,7 +69,13 @@ export const Offer = ({ scrSize }) => {
                 src={finalsIcon}
                 alt="finals icon"
               ></img>
-              <h2 className={clsx(styles.offer__list_element_text, "txt_purple", "txt_purple--point")}>
+              <h2
+                className={clsx(
+                  styles.offer__list_element_text,
+                  "txt_purple",
+                  "txt_purple--point"
+                )}
+              >
                 Przygotowania <br /> do konkursów
               </h2>
             </div>
@@ -67,29 +85,34 @@ export const Offer = ({ scrSize }) => {
                 src={currentIcon}
                 alt="current icon"
               ></img>
-              <h2 className={clsx(styles.offer__list_element_text, "txt_purple", "txt_purple--point")}>
+              <h2
+                className={clsx(
+                  styles.offer__list_element_text,
+                  "txt_purple",
+                  "txt_purple--point"
+                )}
+              >
                 Bierzącego <br /> Materiału
               </h2>
             </div>
           </div>
         </Fade>
       </div>
-      {scrSize === "large" && 
-        <Blob
-          position={"offer_left"}
-          color={"violet"}
-        />
-      }
-      {scrSize === "large" && 
-        <Blob
-          position={"offer_right"}
-          color={"violet"}
-        />
-      }
+      {scrSize === "large" && <Blob position={"offer_left"} color={"violet"} />}
+      {scrSize === "large" && (
+        <Blob position={"offer_right"} color={"violet"} />
+      )}
 
-      <img src={aSquare} className={styles.offer__a_square_l} alt="a square"></img>
-      <img src={aSquare} className={styles.offer__a_square_r} alt="a square"></img>
-
+      <img
+        src={aSquare}
+        className={styles.offer__a_square_l}
+        alt="a square"
+      ></img>
+      <img
+        src={aSquare}
+        className={styles.offer__a_square_r}
+        alt="a square"
+      ></img>
     </section>
   )
 }

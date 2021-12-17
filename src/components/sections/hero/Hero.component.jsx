@@ -30,7 +30,6 @@ export const Hero = () => {
           alt="down arrow icon"
         />
       </Link>
-
     </section>
   )
 }

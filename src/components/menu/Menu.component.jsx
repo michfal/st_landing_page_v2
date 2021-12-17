@@ -6,9 +6,7 @@ import * as styles from "./Menu.module.scss"
 
 import hamburgerIcon from "../../images/icon_hamburger.svg"
 
-
 export const Menu = () => {
-
   const [planOpenState, setPlanOpen] = useToggle()
 
   return (
@@ -22,6 +20,7 @@ export const Menu = () => {
       </button>
       <div className={clsx(styles.menu, planOpenState && styles.menu_display)}>
         <Link
+          onClick={setPlanOpen}
           className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="offer"
@@ -32,6 +31,7 @@ export const Menu = () => {
           Oferta
         </Link>
         <Link
+          onClick={setPlanOpen}
           className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="structure"
@@ -42,6 +42,7 @@ export const Menu = () => {
           Struktura Kursu
         </Link>
         <Link
+          onClick={setPlanOpen}
           className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="elementary_egzam"
@@ -52,6 +53,7 @@ export const Menu = () => {
           Egzamin 8{"\u00A0"}klasisty
         </Link>
         <Link
+          onClick={setPlanOpen}
           className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="finals"
@@ -62,6 +64,7 @@ export const Menu = () => {
           Egzamin Maturalny
         </Link>
         <Link
+          onClick={setPlanOpen}
           className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="contest"
@@ -72,6 +75,7 @@ export const Menu = () => {
           Przygotowanie do Konkursów
         </Link>
         <Link
+          onClick={setPlanOpen}
           className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="current_material"
@@ -82,6 +86,7 @@ export const Menu = () => {
           Bieżący Materiał
         </Link>
         <Link
+          onClick={setPlanOpen}
           className={clsx("txt_white", styles.menu__item)}
           activeClass="active"
           to="contact"

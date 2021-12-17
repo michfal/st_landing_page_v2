@@ -23,13 +23,10 @@ export const CurrentMaterial = ({ paragraph, scrSize }) => {
               headerText="Opracowanie Bieżącego Materiału"
               color="green"
             />
-            <ParagraphText
-              align={"left"}
-              paragraph={paragraph}
-            />
+            <ParagraphText align={"left"} paragraph={paragraph} />
           </Fade>
         </div>
-        {scrSize === "large" &&
+        {scrSize === "large" && (
           <Fade right duration={dur}>
             <StaticImage
               className={styles.image_owl_checklist}
@@ -39,18 +36,18 @@ export const CurrentMaterial = ({ paragraph, scrSize }) => {
               quality="100"
             />
           </Fade>
-        }
+        )}
       </div>
-      
-      <img src={squareRoot3} className={styles.current_material__square_root_l} alt="square root"></img>
 
+      <img
+        src={squareRoot3}
+        className={styles.current_material__square_root_l}
+        alt="square root"
+      ></img>
 
-      {(scrSize === "medium" || scrSize === "large") &&
-        <Blob
-          position={"current_material"}
-          color={"light_green"}
-        />
-      }
+      {(scrSize === "medium" || scrSize === "large") && (
+        <Blob position={"current_material"} color={"light_green"} />
+      )}
     </section>
   )
 }

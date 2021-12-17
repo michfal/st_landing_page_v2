@@ -2,7 +2,7 @@ import * as React from "react"
 import { Layout } from "../components/layout"
 import { Helmet } from "react-helmet"
 
- const IndexPage = () => (
+const IndexPage = () => (
   <>
     <Helmet>
       <meta charSet="utf-8" />
