@@ -1,4 +1,4 @@
-<h1>Landing page built for math coaching school.</h1>
+<h1>Landing page build for math coaching school.</h1>
 <p>I needed to built a simple website that would show a private tutor offer and a structure of available math courses.</p>
 <h2>Built With:</h2>
   <ul>
