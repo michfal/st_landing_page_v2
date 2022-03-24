@@ -6,3 +6,5 @@
     <li>SCSS</li>
     <li>Netlify CMS</li>
   </ul>
+<h3>Live version</h3>
+<a>https://szkolatalentow.com.pl/</a>
