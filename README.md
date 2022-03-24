@@ -7,4 +7,4 @@
     <li>Netlify CMS</li>
   </ul>
 <h3>Live version</h3>
-<a>https://szkolatalentow.com.pl/</a>
+<a href="https://szkolatalentow.com.pl/">https://szkolatalentow.com.pl/</a>
