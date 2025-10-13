@@ -39,36 +39,36 @@ Version 2 of the website focuses on improved performance, cleaner layout, and ea
    ```
 2. **Install dependencies**
 
-```bash
-npm install
-# or
-yarn install
-```
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 3. Run locally
 
-```bash
-npm run develop
-# or
-yarn develop
-```
+   ```bash
+   npm run develop
+   # or
+   yarn develop
+   ```
 4. Build for production
 
-```bash
-npm run build
-```
+   ```bash
+   npm run build
+   ```
 📂 Project Structure
-```bash
+   ```bash
 
-st_landing_page_v2/
-├── src/
-│   ├── components/       # Reusable UI components
-│   ├── pages/            # Gatsby pages
-│   ├── styles/           # Global and modular SCSS
-│   └── images/           # Assets
-├── static/admin/         # Netlify CMS configuration
-├── gatsby-config.js
-└── package.json
-```
+   st_landing_page_v2/
+   ├── src/
+   │   ├── components/       # Reusable UI components
+   │   ├── pages/            # Gatsby pages
+   │   ├── styles/           # Global and modular SCSS
+   │   └── images/           # Assets
+   ├── static/admin/         # Netlify CMS configuration
+   ├── gatsby-config.js
+   └── package.json
+   ```
 🧪 Deployment
 Deployed via Netlify — pushing to the main branch triggers automatic deployment.
 
